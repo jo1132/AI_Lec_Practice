@@ -1,0 +1,428 @@
+/*웹 폰트 설정 (@import)방법*/
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,100&display=swap');
+/*다운로드 받은 폰트 적용하는 방법*/
+/*사용자 정의 폰트 정의하는 방법 == font-face규칙 적용한다.*/
+@font-face {
+	font-family: 'NewTegomin-Regular';
+	src: url(images/NewTegomin-Regular.ttf);
+}
+
+*{ /*CSS3 모든 (전체) 선택자*/
+	color: black;
+	margin: 0; /* 바깥 여백*/
+	padding: 0; /* 안쪽 여백*/
+	
+	/*폰트 패밀리로 구글 폰트에서 선택한 폰트를 적용할 수 있다.*/
+	/*
+	font-family: 'Nanum Pen Script'; 
+	*/
+	
+	border-radius: 5px
+}
+
+hr {
+	color:white;
+	background-color: white;
+}
+
+html { /*태그 선택자 (html태그)*/
+	height: 100%;
+}
+
+body {
+	font: normal/*보통체*/ 0.8em/*글씨크기*/ sans-serif/*글꼴*/;
+	background-color: #cfcfcf;
+	color: white;
+}
+
+p {
+	padding: 0 0 18px 0;
+	line-height: 1.7em; /*줄 간격*/
+}
+
+img {
+	border: 0px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font: normal 165% sans-serif;
+	color: tomato;
+	margin: 0 0 14px 0;
+}
+
+h2 {
+	color: green;	
+}
+
+h4, h5, h6{
+	font: normal 120% sans-serif;
+	color: lightCoral;
+	margin: 0;
+	padding: 0 0 5px 0;
+}
+
+h5, h6 {
+	font: normal 95% sans-serif;
+	color: green;
+	background-color: #eee6ff;
+}
+
+/*hover에는 뛰어쓰기 없이쓰는 상태선택자*/
+a, a:hover {
+	outline: none;
+	color: blue;
+	text-decoration: underline; /*밑줄 생성*/
+}
+
+a:hover {
+	text-decoration: overline;/*밑줄말고 위에줄생김*/
+	/*text-decoration: none; 밑줄 없음*/
+	color: hotpink;
+}
+
+ul {
+	margin: 2px 0 0 17px; /*위, 오른쪽, 아래, 왼쪽*/
+	color:green;
+}
+
+ul li { /*ul 태그 아래에 있는 li태그를 찾아서 바꿈*/
+	color: #008fb3;
+	list-style-type: node;
+	margin: 0 0 3px 0;
+	padding: 0 0 4px 5px;
+}
+
+
+/*id명 앞에는 #,  class명 앞에는 .을 붙인다.*/
+#main, #logo, nav, #site_content, #footer {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#main {
+	padding-bottom: 20px;
+}
+
+header {
+	background-color: transparent; /*투명하게*/
+	height: 170px
+}
+
+#logo {
+	width: 918px;
+	position: relative; /*상대좌표: 나머지 요소 위치에 영향을 주지 않고 자신만 움직임*/
+	height: 134px;
+}
+
+#logo h1 {
+	font-size: 300%;
+	padding: 24px 0 0 0;
+	margin: 0;
+	color: #ffffff;
+}
+
+#logo h2 {
+	font-size: 120%;
+	padding: 4px 0 0 0;
+	color: #a8aa94;
+	background-color: white;
+}
+
+#logo h1, #logo h1 a, #logo h1 a:hover {
+	padding: 22px 0 0 0; /*위, 오른쪽, 아래, 왼쪽의 순서(시계방향)*/
+	color: white;
+	text-decoration: none;
+}
+
+#logo h1 a:hover {
+	text-decoration: underline overline;
+	color: hotpink;
+}
+
+nav {
+	width: 918px;
+	height: 24px;
+}
+
+h1 {
+	border: 2px solid white;
+	padding-left: 20px;
+	margin-left: 10px;
+}
+
+/*********************** 메뉴부분 ***************************/
+
+ul#menu {
+	float: left; /*float해서 오른쪽으로 뜬다.*/
+	margin: 0;
+	padding: 0;
+}
+
+#menu li {
+	float: left;
+	list-style-type: none;
+	padding: 0;
+	margin: 5px 5px 0 0;
+}
+
+#menu li a {
+	display: block; /*a태그는 기본적으로 display의 값이 inline이라서  block으로 설정하여 너비를 최대로 이용*/
+	font-size: 120%;
+	height: 20px;
+	padding: 5px 10px;
+	margin: 0px 2px;
+	color: white;
+	text-align: center; /*글자 태그만 정렬*/
+	border: 1px solid white;
+	text-decoration: none;
+}
+
+
+#menu li a:hover {
+	color: deeppink;
+	border-color: deeppink;
+}
+
+#menu li.selected a, #menu li.selected a:hover{ /*id가 menu이고, class가 selected인 것*/
+		color: #cfcfcf;
+		border: #cfcfcf solid 1px;
+		background-color: #fff;
+}
+/*-----------------------------본문부분-------------------------------*/
+
+#site_content {
+	width: 858px;
+	overflow: hidden;
+	margin: 0 auto; /*위아래 0, 좌우 오토 => 좌우 정렬한다*/
+	padding: 10px 20px 20px 20px;
+	border: 10px solid #fff;
+	background: #f6f6f6 url("images/back.jpg") repeat-y; /*y 축으로 이미지 반복*/
+}
+
+aside {
+	width: 190px;
+	float: right;
+	padding: 0 15px 20px 15px;
+}
+
+aside ul {
+	width: 178px;
+	padding: 4px 0 0 0;
+	margin: 4px 0 30px 0;
+}
+
+aside ul li {
+	list-style: none;
+	padding: 0 0 7px 0;
+}
+
+aside ul li a, aside ul li a:hover {
+	padding: 0 0 0 30px; /*앞에 이미지 넣을 공간 넣음*/
+	display: block; /* <a>태그를 부모의 크기로 다쓰기*/
+	text-decoration: underline;
+	background: transparent url("images/heart.png") no-repeat left center;
+	background-color: gray;
+	color: white;
+}
+
+aside ul li a:hover {
+	color: tomato;
+	text-decoration: underline overline;
+}
+
+section {
+	text-align: left;
+	width: 613px;
+	padding: 0;
+}
+
+article {
+	border-top: white 2px solid;
+	border-bottom: white 2px solid;
+	padding-bottom: 15px;
+}
+
+article h2{
+	margin-top: 15px;	
+}
+
+table {
+	width: 100%; /*퍼센트 기준은 부모, 즉 부모(article)의 100%의 너비를 쓰겠다는 의미다.*/
+	height: 0; /*내가 가지고있는 높이만 가지겠다. == 생략가능하다.*/
+	margin: 7px 0 14px 0;
+}
+
+td, th {
+	background-color: tomato;
+	color: white;
+	padding: 5px 4px;
+}
+
+th {
+	text-align: center /*가운데 정렬*/
+}
+
+td {
+	background-color: #e6e6e6;
+	color: black;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+}
+
+table caption {
+	font-size: 16px;
+	color: tomato;
+	margin: 5px;
+}
+
+/*-----------------------------풋터부분--------------------------------*/
+
+footer {
+	border-top: white 2px solid;
+	border-bottom: white 2px solid;
+	width: 918px;
+	height: 100%;
+	font-size: 90%;
+	fontfamily: sans-serif;/*글꼴*/
+	padding: 5px 0 5px 0;
+	text-align: center;
+	margin: 10px auto;
+	
+	background: transparent;/* 투명 */
+	text-transform: uppercase; /*모두 대문자로*/
+	letter-spacing: 0.05em; /*글자와 글자 사이의 간격, em(엔)은 대문자 높이를 기준하는 크기*/
+}
+
+footer a, footer a:hover{
+	text-decoration: underline;
+	color: black;
+}
+
+footer a:hover{
+	color: white;
+	text-decoration: underline overline;
+	font-size:110%;
+}
+
+footer p{
+	line-height: 24px;
+	padding: 0;
+}
+
+/*------------------------------ㅡMenu2 CSS적용----------------------------------*/
+
+.webfont1 { /* class이름 앞에는 반드시 '.'를 붙혀야 한다.*/
+	font-size: 40px;
+	font-family: 'raleway', sans-serif; /*글꼴을 불러올 수 있다면 raleway적용 아니면 산스세리프로 적용한다. ','로 구별한다.*/
+}
+
+.webfont2 {
+	font-size: 40px;
+	font-family: 'Nanum Brush Script';
+}
+
+.webfont3 {
+	font-size: 40px;	
+	font-family: 'NewTegomin-Regular';
+}
+
+/*----------------------------------Menu3 애니메이션 적용----------------------------------*/
+
+#art h3 {
+	animation-duration: 3s; /*애니메이션의 시간*/
+	animation-name: slidein; /*애니메이션의 네임은 꼭 만들어줘야 한다.*/
+	animation-iteration-count: 10; /*애니메이션 반복 횟수*/
+}
+@keyframes slidein { /*slidein이라는 이름의 중간상태의 정의 */
+	from {/*시작상태*/
+		width: 50%;
+		margin-left: 50%; /*부모의 최대 50%너비의 마진을 준다.*/
+	} 
+	to{/*끝 상태*/     
+		width: 50%;
+		margin-left: 0%;
+	}
+}
+
+#transform1 {
+	transform: rotate(90deg); /*이미지를 시계방향으로 90도 회전시킨다. 음수면 반시계방향*/	
+}
+#transform2 {
+	transform: skewx(30deg); /*이미지를 y축 기준으로 비튼다.*/	
+}
+#transform3 {
+	transform: 	scale(0.5); /*1은 100%를 뜻한다.*/
+}
+
+
+#box {
+	width: 30px;
+	height: 20px;
+	border: 2px double black;
+	border-radius: 5px 5px 5px 5px; /*왼쪽 위 기준으로 시계방향으로 설정된다.*/
+	/*border-radius: 50%; /*완전 타원.*/
+	background-color: hotpink;
+	transition: all 0.1s; /*아래의 호버로 박스가 바뀔때 바로 바뀌는게 아니라 천천히 바뀜*/
+}
+#box:hover{
+	width: 100%;
+	height: 60px;
+	background-color: blue;
+}
+
+#box2 {
+	position: relative; /*상대적 레이아웃*/
+	width: 30px;
+	height: 30px;
+	background-color: blue;
+	left: 10px;
+	top: 10px;
+	
+	animation-name: multi;
+	animation-duration: 4s;
+	animation-iteration-count: 10;
+}
+@keyframes multi {
+	0%{
+		background-color: red;
+		left: 10px; top: 10px;
+	}
+	25%{
+		background-color: yellow;
+		left: 100px; top: 10px;
+	}
+	50%{
+		background-color: green;
+		left: 100px; top: 100px;
+	}
+	75%{
+		background-color: blue;
+		left: 10px; top: 100px;
+	}
+	100%{
+		background-color: red;
+		left: 10px; top: 10px;
+	}
+}
+
+#transition:hover{
+	text-shadow: 0 0 2px blue; /*그림자 주기*/
+}
+
+/*--------------------------------Menu 4---------------------------------*/
+
+#imagemaps {
+	border-radius: 0 10px 0 10px;
+	transition: all 1s;
+}
+#imagemaps:hover{
+	opacity: 0.1; /*투명도 설정*/
+	border-radius: 30px;
+}
+
+/*--------------------------------Menu 5----------------------------------*/
+
+#CanvasBox, svg{
+	border: 1px solid black;
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html> <!-- HTML5에서 처음 시작할때,  4는 더 길어진다. -->
+<html>
+	<head>
+		<meta charset="UTF-8"> <!-- 한글뿐만 아니라 모든 문자 안깨지게 인코딩 -->
+		<!-- 원래 태그는 시작과 끝이 있으나, meta같이 끝이 없어도 되는 태그가 있는데, 빈태그라고 한다. -->
+		<title>HTML5와 CSS3연습</title> <!-- 페이지의 타이틀이 들어간다. (창 이름) -->
+			
+		<!-- 외부 스타일 시트 적용(link) -->
+		
+		<!--내부스타일시트적용, head 태그 내에 작성(태그시에는 CSS문법만 사용가능) -->
+		<link href="Style.css" rel="stylesheet">
+	</head>
+	<body>
+		<div id="main"> <!-- id명은 중복불가하다 -->
+			<header><!-- header: 머릿글 영역 -->
+				<div id="logo">
+					<h1><a href="Index.html">HTML5/CSS_TEST SITE</a></h1> <!-- 제목태그, 1>2>3>>>6 -->
+					<h2>HTML5, CSS를 이용한 웹 개발 테스트 사이트 입니다.</h2>
+					<hr>
+				</div>
+				
+				<nav><!-- 주 메뉴(글로벌 네비게이터)를 표현할때 자주 쓰인다 -->
+					<ul id="menu"><!-- 순서없는 목록 -->
+						<li><a href="Index.html">HOME</a></li>
+						<li><a href="Menu1.html">메뉴1</a></li>
+						<li><a href="Menu2.html">메뉴2</a></li>
+						<li><a href="Menu3.html">메뉴3</a></li>
+						<li class="selected"><a href="Menu4.html">메뉴4</a></li>
+						<li><a href="Menu5.html">메뉴5</a></li>
+					</ul>
+				</nav>
+			</header>
+			
+			<div id="site_content">
+				<aside><!-- 주변내용(광고, 링크등), 주 내용이 아닌 부분 (around side)-->
+					<h2>최신뉴스</h2>
+					<h4>HTML5는 어떻게 활용해야하는 언어인가?</h4>
+					<h5>2020-04-30</h5>
+					
+					<p>
+						웹 문서를 제작하는 데 쓰이는 기본 프로그래밍 언어 HTML(<i>hypertext markup language</i>)의 최신규격으로, 
+						<br>웹페이지를 구성하는 데 있어 지배적인 역할을 하는 마크업 언어(<i>markup language</i>)이다. 
+						<br>[네이버 지식백과] HTML 5 (시사상식사전, pmg 지식엔진연구소)
+					</p>
+					
+					<p><a href="https://terms.naver.com/entry.naver?docId=973169&cid=43667&categoryId=43667" target="_blanck">더 많은 정보는 이곳을 클릭하세요</a></p>
+					
+					<br>
+					
+					<h2>참조링크</h2>
+					<ul>
+						<li><a href="#">link1</a></li>
+						<li><a href="#">link2</a></li>
+						<li><a href="#">link3</a></li>
+						<li><a href="#">link4</a></li>
+					</ul>
+					
+					<br>
+					
+					<h2>기타정보</h2>
+					<p>HTML5 기타정보 입니다.</p>
+					<figure><!-- 여러개의 이미지를 관리할때 사용 -->
+						<figcaption>이미지들</figcaption> <!-- Figure의 제목 -->
+						<img src="D:\이미지기반_인공지능\2021_04_30\WebContent\images\img1.jpg" width="200" height="200">
+					</figure>
+					
+				</aside>
+				<br>
+				<section><!-- 기사, 공지사항 동의 영역-->
+					<article><!-- 기사내용, 섹션이랑 위치 바뀌어도 괜찮다.-->
+						<h2>구글 맵</h2>
+						<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+						<!-- CND이용 jQuery -->
+						<!-- Google Map -->
+						<div id="GoogleMap" style="width: 100%; height: 380px; border-radius: 10px; border: 1px solid white;"></div>
+			                  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+			                  <!-- CND 이용 JQuery -->
+			                  <!-- Google Map -->
+			                  <script src="http://maps.googleapis.com/maps/api/js"></script>
+			                  <script>
+			                     function initialize(){
+			                        var mapProp = {
+			                              center: new google.maps.LatLng(40.74669746,-73.98194777),
+			                              zoom: 18,
+			                              mapTypeId: google.maps.MapTypeId.ROADMAP
+			                        };
+			                        var map = new google.maps.Map(document.getElementById("GoogleMap"), mapProp);
+			                     }
+			                     google.maps.event.addDomListener(window,'load',initialize);
+							</script>
+					</article>
+					<br>
+					<article>
+						<h2>맵 태그 사용</h2>
+						<img id="imagemaps" src="images/html5.png" alt="html5이미지 입니다." usemap="#html5img">
+						
+						<map name="#html5img">
+							<area shape="rect" coords="0,35,125,190" alt="html5" href="https://terms.naver.com/entry.naver?docId=973169&cid=43667&categoryId=43667" target="_blank">
+							<area shape="circle" coords="245,110,75" alt="CSS3" href="https://ko.wikipedia.org/wiki/CSS" target="_blank">
+							<area shape="rect" coords="350,35,485,190" alt="JS" href="https://terms.naver.com/entry.naver?docId=3580851&cid=59088&categoryId=59096" target="_blank">
+							<area shape="circle" coords="#" alt="html5" href="#">
+							<area shape="poly" coords="350,280,363,314,399,314,372,335,383,366,351,351,367,320,328,321,302,314,338,314" alt="star" href="#">
+						</map>
+					</article>
+				</section>
+			</div>
+			
+			<footer><!-- 바닥글 영역 -->
+				<p><a href="Index.html">HOME</a> | <a href="Menu1.html">메뉴1</a> | <a href="Menu2.html">메뉴2</a> | <a href="Menu3.html">메뉴3</a> | <a href="Menu4.html">메뉴4</a>  | <a href="Menu4.html">메뉴4</a> | <a href="Menu5.html">메뉴5</a></p>
+				
+				<p>
+				Copyright &copy; JHK | 
+				<a href="https://www.w3schools.com/" target="_blanck">w3schools</a> | 
+				<a href="javascript:alert('Hey you king!');">기타 웹 표준 사이트</a>
+				</p>
+			</footer>
+		</div>
+	</body>
+</html>

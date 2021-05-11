@@ -1,0 +1,113 @@
+<!DOCTYPE html> <!-- HTML5에서 처음 시작할때,  4는 더 길어진다. -->
+<html>
+	<head>
+		<meta charset="UTF-8"> <!-- 한글뿐만 아니라 모든 문자 안깨지게 인코딩 -->
+		<!-- 원래 태그는 시작과 끝이 있으나, meta같이 끝이 없어도 되는 태그가 있는데, 빈태그라고 한다. -->
+		<title>HTML5와 CSS3연습</title> <!-- 페이지의 타이틀이 들어간다. (창 이름) -->
+			
+		<!-- 외부 스타일 시트 적용(link) -->
+		
+		<!--내부스타일시트적용, head 태그 내에 작성(태그시에는 CSS문법만 사용가능) -->
+		<link href="Style.css" rel="stylesheet">
+	</head>
+	<body>
+		<div id="main"> <!-- id명은 중복불가하다 -->
+			<header><!-- header: 머릿글 영역 -->
+				<div id="logo">
+					<h1><a href="Index.html">HTML5/CSS_TEST SITE</a></h1> <!-- 제목태그, 1>2>3>>>6 -->
+					<h2>HTML5, CSS를 이용한 웹 개발 테스트 사이트 입니다.</h2>
+					<hr>
+				</div>
+				
+				<nav><!-- 주 메뉴(글로벌 네비게이터)를 표현할때 자주 쓰인다 -->
+					<ul id="menu"><!-- 순서없는 목록 -->
+						<li><a href="Index.html">HOME</a></li>
+						<li><a href="Menu1.html">메뉴1</a></li>
+						<li><a href="Menu2.html">메뉴2</a></li>
+						<li class="selected"><a href="Menu3.html">메뉴3</a></li>
+						<li><a href="Menu4.html">메뉴4</a></li>
+						<li><a href="Menu5.html">메뉴5</a></li>
+					</ul>
+				</nav>
+			</header>
+			
+			<div id="site_content">
+				<aside><!-- 주변내용(광고, 링크등), 주 내용이 아닌 부분 (around side)-->
+					<h2>최신뉴스</h2>
+					<h4>HTML5는 어떻게 활용해야하는 언어인가?</h4>
+					<h5>2020-04-30</h5>
+					
+					<p>
+						웹 문서를 제작하는 데 쓰이는 기본 프로그래밍 언어 HTML(<i>hypertext markup language</i>)의 최신규격으로, 
+						<br>웹페이지를 구성하는 데 있어 지배적인 역할을 하는 마크업 언어(<i>markup language</i>)이다. 
+						<br>[네이버 지식백과] HTML 5 (시사상식사전, pmg 지식엔진연구소)
+					</p>
+					
+					<p><a href="https://terms.naver.com/entry.naver?docId=973169&cid=43667&categoryId=43667" target="_blanck">더 많은 정보는 이곳을 클릭하세요</a></p>
+					
+					<br>
+					
+					<h2>참조링크</h2>
+					<ul>
+						<li><a href="#">link1</a></li>
+						<li><a href="#">link2</a></li>
+						<li><a href="#">link3</a></li>
+						<li><a href="#">link4</a></li>
+					</ul>
+					
+					<br>
+					
+					<h2>기타정보</h2>
+					<p>HTML5 기타정보 입니다.</p>
+					<figure><!-- 여러개의 이미지를 관리할때 사용 -->
+						<figcaption>이미지들</figcaption> <!-- Figure의 제목 -->
+						<img src="D:\이미지기반_인공지능\2021_04_30\WebContent\images\img1.jpg" width="200" height="200">
+					</figure>
+					
+				</aside>
+				<br>
+				<section><!-- 기사, 공지사항 동의 영역-->
+					<article id="art"><!-- 기사내용, 섹션이랑 위치 바뀌어도 괜찮다.-->
+						<h2>CSS3를 이용한 간단한 애니메이션</h2>
+						<p><strong>CSS3</strong>를 이용해서 애니메이션을 만들기 위해서는 애니메이션 스타일과 애니메이션 중간 상태를 나타내는 <i>keyframe</i>이 필요합니다.</p>
+						<br>
+						<h3>keyframe</h3>
+						
+					</article>
+					<br>
+					<article>
+						<h2>Transfrom</h2>
+						<img src="images/img2.jpg" width="120" height="120"> <!-- 원본이미지 -->
+						<img id="transform1" src="images/img2.jpg" width="120" height="120"> <!--  -->
+						<img id="transform2" src="images/img2.jpg" width="120" height="120"> <!--  -->
+						<img id="transform3" src="images/img2.jpg" width="120" height="120"> <!--  -->
+						
+					</article>
+					<br>
+					<article>
+						<h2 id="transition">Transition</h2>
+						<p>
+							<strong>Transition</strong>은 애니메이션 효과를 만드는데 사용할 수 있습니다. 
+							<br>Transition을 사용하지 않을 경우에는 변화가 순간적으로 일어나지만 속도를 지정하면 사용자에게 부드러운 화면을 보여줄 수 있습니다.
+						</p>
+						
+						<div id="box"></div>
+						
+						<div id="box2"></div>
+
+					</article>
+				</section>
+			</div>
+			
+			<footer><!-- 바닥글 영역 -->
+				<p><a href="Index.html">HOME</a> | <a href="Menu1.html">메뉴1</a> | <a href="Menu2.html">메뉴2</a> | <a href="Menu3.html">메뉴3</a> | <a href="Menu4.html">메뉴4</a>  | <a href="Menu4.html">메뉴4</a> | <a href="Menu5.html">메뉴5</a></p>
+				
+				<p>
+				Copyright &copy; JHK | 
+				<a href="https://www.w3schools.com/" target="_blanck">w3schools</a> | 
+				<a href="javascript:alert('Hey you king!');">기타 웹 표준 사이트</a>
+				</p>
+			</footer>
+		</div>
+	</body>
+</html>
