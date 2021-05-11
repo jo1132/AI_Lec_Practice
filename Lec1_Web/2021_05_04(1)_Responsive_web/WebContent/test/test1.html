@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>반응형 웹 연습1</title>
+		
+		<!-- 내부 스타일 적용  -->
+		<style>
+			/*모든 장비에 적용, 그러나 너비가 500px을 넘으면 적용 X*/
+			@media all and (max-width: 500px){
+				*{
+					background-color: pink;
+					color: white;
+				}
+			}
+			
+			/*모든 장비에 적용, 그러나 너비가 500이상일때만 적용 X*/
+			/*500이 겹친다. 그러나 이후에 쓰인게 최종이기 때문에 500은 hotpink로 나오게 된다.*/
+			@media all and (min-width: 500px){
+				*{
+					background-color: hotpink;
+					color: white;
+				}
+			}
+			
+			/*orientation: portrait == (width < height, 세로방향일때)*/
+			@media all and (min-width: 500px) and (orientation: portrait){
+				*{
+					background-color: green;
+					color: white;
+				}
+			}
+			
+			/*orientation: landscape == (width > height, 가로방향일때)*/
+			@media all and (min-width: 500px) and (orientation: landscape){
+				*{
+					background-color: lightgray;
+					color: white;
+				}
+			}
+			
+			@media all and (min-width: 1000px) and (orientation: landscape){
+				*{
+					background-color: black;
+					color: white;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<h1>미디어 쿼리</h1>
+		<h2>반응형 웹을 위한 미디어 쿼리 적용 예</h2>
+	</body>
+</html>
