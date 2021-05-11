@@ -1,0 +1,573 @@
+/*웹 폰트 정의 부분*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
+
+/*Reset 부분(초기화 부분), 쓸지 말지 모르지만 일단 작성한다.*/
+* {
+	margin: 0;
+	padding: 0;
+	font-family:'Gamja Flower';
+}
+
+a {
+	outline: 0;
+	text-decration: none;
+	color: gray;
+}
+
+ul, ol {
+	list-style: none;
+}
+
+img {
+	border: 0;
+}
+
+h1 {
+	width: 90%;
+	margin: 15px auto 5px auto;
+}
+
+h4 {
+	font-family: 'Gamja Flower';
+	font-size: 120%;
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+	letter-spacing: 0.1em;
+	transition: all 1s;
+	animation: ani1 2s;
+}
+
+@keyframes ani1 {
+	0%{opacity: 0;}
+	100%{opacity: 1;}
+}
+
+#menu {
+	position: relative;
+	top: 17%;
+	left: 0;
+}
+#menu li {
+	text-align: center;
+}
+#menu li a, #menu li a:hover, #menu li a:active{ /*active: 마우스로 클릭한 상태*/
+	display: inline-block;
+	width: 100%;
+	line-height: 2.0;
+	font-size: 24px;
+	color: #737373;
+	letter-spacing: 0.1em;
+	font-family: Raleway;
+	text-decoration: none;
+}
+#menu li a:hover{
+	font-size: 30px;
+	background-color: #737373;
+	color: white;	
+}
+
+.IconSet {
+	position: absolute;
+	bottom: 25px;
+	width: 100%;
+	text-align: center;
+	letter-spacing: 1em;
+}
+.IconSet:hover{
+	transform: scale(1.2);
+}
+
+body {
+	font: 12px/1.6 'Pangolin';
+	color: Gray;
+}
+
+header {
+	position: fixed; /*position을 fixed로 쓰려면 반드시 위치 지정을 해야한다.*/
+	width: 15%;
+	height: 100%;
+	background-color: #f2f2f2;
+	top: 0; /*꼭대기에 붙어있는다*/
+	left: 0;
+	transition: all 1s;
+}
+
+nav {
+	position: relative;
+	width: 85%;
+	height: 35px;
+	background-color: #bfbfbf;
+	margin-left: 15%;
+	transition: all 0.5s;
+}
+nav a {
+	margin: 5px;
+	float: right;
+	width:20px;
+}
+nav a img {
+	float: right;
+}
+
+section {
+	width: 85%;
+	margin-left: 15%;
+	position: relative;
+}
+
+article {
+	float: left;
+	height: 260px;
+	transition: all 0.5s; /*모든, 1초*/
+	animation: art-scale 1s;
+}
+
+@keyframes art-scale {
+	from {
+		transform: scale(0); /*아예 안보임*/
+	}
+	
+	to {
+		transform: scale(1); /*원래크기로 보임*/
+	}
+}
+
+
+
+/*각 박스 크기지정*/
+article:nth-child(1){width:60%; height:520px;}
+article:nth-child(2){width:40%;}
+article:nth-child(3){width:20%; background-color:#bbb;}
+article:nth-child(4){width:20%; background-color:#aaa;}
+article:nth-child(5){width:20%; background-color:#999;}
+article:nth-child(6){width:40%; background-color:#888;}
+article:nth-child(7){width:20%; background-color:#777;}
+article:nth-child(8){width:20%; background-color:#666;}
+article:nth-child(9){width:40%; background-color:#555;}
+article:nth-child(10){width:20%; background-color:#444;}
+article:nth-child(11){width:20%; background-color:#333;}
+article:nth-child(12){width:20%; background-color:#222;}
+
+
+/*_____________________________________배경이미지 넣기________________________________________*/
+.video1 {
+	background-color: gray;
+}
+
+.bg2 {
+	background-image: url("../images/king.jpg"); /*../는 이전폴더의 의미다. 따라서 style폴더에서 webcontent폴더로 ㅣ동하여 그곳에서 images폴더 안에 이미지 파일을 뜻한다.*/
+	background-size: 50% 100%;
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+.bg3 {
+	background-image: url("../images/chalange.png"); /*../는 이전폴더의 의미다. 따라서 style폴더에서 webcontent폴더로 ㅣ동하여 그곳에서 images폴더 안에 이미지 파일을 뜻한다.*/
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+.bg3 h1 {
+	color: white;
+	position: relative;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	left: 0;
+	bottom: 0%;
+	background-color: rgba(0,0,0,0.7);
+	
+}
+
+.bg4 {
+	background-image: url("../images/bg1.png"); /*../는 이전폴더의 의미다. 따라서 style폴더에서 webcontent폴더로 ㅣ동하여 그곳에서 images폴더 안에 이미지 파일을 뜻한다.*/
+	background-size: cover;
+	background-position: center center;
+}
+
+#btn1 {
+	postition: relative;
+	top: 100px;
+	width: 80%;
+	height: 35px;
+	text-align: center;
+	padding-top: 15px;
+	background-color: white;
+	opacity: 0.5;
+	border-radius: 10px;
+	margin: 0 auto;
+}
+#btn1:hover{
+	opacity: 1;
+}
+
+.txt2 {
+	background-image: url("../images/news.png"); 
+	background-size: 100%;
+	background-position: center center;
+}
+
+#img1 {
+	background-color: black;
+	transition: all 2s;
+}
+#img1 img {
+	opacity: 0;
+}
+#img1 span{
+	position: relative;
+	top: 50%;
+	left: 30%;
+	color: white;
+	opacity: 1;
+	text-align: center;
+}
+#img1:hover img{
+	opacity: 1.0;
+}
+#img1:hover span{
+	opacity: 0.0;
+}
+
+/*___________________________________이미지박스 호버 효과____________________________________________*/
+
+.bg4 span {
+	position: relative;
+	top: 50ox;
+	margin-left: 0;
+	font-family: 'Gamja Flower';
+	font-size: 290%;
+	color: white;
+	opacity: 0;
+}
+.bg4:hover span{
+	opacity: 1;
+	animation: ani2 3s;
+}
+@keyframes ani2 {
+	from{
+		opacity: 0.0;
+		color: white;
+	}
+	to{
+		color: white;
+		opacity: 1.0;
+	}
+}
+
+
+.txt {
+	color: white;
+	width: 100%;
+	height: 100%;
+	background-image: url("../images/bg2.jpg"); /*../는 이전폴더의 의미다. 따라서 style폴더에서 webcontent폴더로 ㅣ동하여 그곳에서 images폴더 안에 이미지 파일을 뜻한다.*/
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+.txt span {
+	position: relative;
+	left: 25px;
+	top: 30px;
+	font-size: 19px;
+	color: gray;
+}
+.txt p {
+	position: relative;
+	left: 25px;
+	top: 50px;
+	width: 80%;
+	fontsize: 17px;
+}
+.txt:hover span{
+	background-color: gray;
+	color: white;
+	opacity: 1;
+}
+.txt:hover p{
+	background-color: pink;
+	color: green;
+	opacity: 1;
+}
+.youtube:hover{
+	transform: scale(1.2);
+}
+
+.txt2 {
+	background-color: #483D8B;
+	color: white;
+	margin: 0 0;
+	postion: center center;
+}
+.txt2 h1 {
+	background-color: rgba(0,0,0,0.7);
+	font-size: 150%;
+
+}
+.txt2 p {
+	color:white;
+	text-align: center;
+	text-decoration: none;
+}
+
+.txt2:hover {
+	background-color: green;
+}
+.txt2:hover h1 {
+	background-color: rgba(255,255,255,0.7);
+	color: black;
+	transform: scale(1.2);
+}
+.txt2 p:hover{
+	color: pink;
+	text-decoration: underline overline;
+	transform: scale(1.2);
+}
+
+#items h4 {
+	position: relative;
+	bottom: 10%;
+	display: none;
+	width: 100%;
+}
+#items:hover{
+	transform: scale(1.5);
+}
+#items:hover h4{
+	display: block;
+	background-color: black;
+	color: white;
+}
+
+#login {
+	background-color: green;
+}
+#login span{
+	position: relative;
+	top: 40%;
+	left: 10%;
+	color: white;
+	font-size: 200%;
+}
+#login input{
+	margin: auto 10px auto 50%;
+}
+#login#id {
+	margin-top: 50%;
+}
+
+article iframe:hover{
+	transform: scale(2);
+}
+/******************************* 반응형 부분 **********************************/
+
+/* 1000~1599픽셀에서 적용 */
+@media screen and (min-width: 900px) and (max-width: 1024px){
+	header {
+		position: relative;
+		width: 100%;
+		height: 80px;
+	}
+	
+	nav {
+		margin-left: 0;
+		width: 100%;
+	}
+		
+	section {
+		margin-left: 0;
+		width: 100%;
+	}
+}
+
+/* 900~999픽셀 사이에 적용 */
+@media screen and (min-width: 900px) and (max-width: 999px){
+	header {
+	/*
+		position: relative;
+		width: 100%;
+		height: 80px;
+	*/
+		display: none;
+		
+	}
+	
+	nav {
+		margin-left: 0;
+		width: 100%;
+	}
+		
+	section {
+		margin-left: 0;
+		width: 100%;
+	}
+	
+		/*각 박스 크기지정*/
+	article:nth-child(1){width:75%;}
+	article:nth-child(2){width:25%;}
+	article:nth-child(3){width:25%;}
+	article:nth-child(4){width:25%;}
+	article:nth-child(5){width:25%;}
+	article:nth-child(6){width:50%;}
+	article:nth-child(7){width:50%;}
+	article:nth-child(8){width:25%;}
+	article:nth-child(9){width:25%;}
+	article:nth-child(10){width:50%;}
+	article:nth-child(11){width:25%;}
+	article:nth-child(12){width:25%;}
+}
+
+/* 780~1024픽셀 사이에 적용 */
+@media screen and (min-width: 780px) and (max-width: 1024px){
+	header {
+		position: relative;
+		width: 100%;
+		height: 80px;
+		display: none;
+	}
+	
+	nav {
+		margin-left: 0;
+		width: 100%;
+	}
+		
+	section {
+		margin-left: 0;
+		width: 100%;
+	}
+	
+		/*각 박스 크기지정*/
+	article:nth-child(1){width:100%; height: 400px;}
+	article:nth-child(2){width:66.6666%;}
+	article:nth-child(3){width:33.3333%;}
+	article:nth-child(4){width:33.3333%; display: none;}
+	article:nth-child(5){width:33.3333%;}
+	article:nth-child(6){width:66.6666%;}
+	article:nth-child(7){width:66.6666%; display: none;}
+	article:nth-child(8){width:33.3333%;}
+	article:nth-child(9){width:33.3333%;}
+	article:nth-child(10){width:33.3333%; display: none;}
+	article:nth-child(11){width:33.3333%;}
+	article:nth-child(12){width:33.3333%; display: none;}
+}
+
+/*640~779까지 */
+@media screen and (min-width: 640px) and (max-width: 779px){
+	header {
+		position: relative;
+		width: 100%;
+		height: 80px;
+		display: none;
+	}
+	
+	nav {
+		margin-left: 0;
+		width: 100%;
+	}
+		
+	section {
+		margin-left: 0;
+		width: 100%;
+	}
+	
+		/*각 박스 크기지정*/
+	article:nth-child(1){width:100%; height: 400px;}
+	article:nth-child(2){width:100%;}
+	article:nth-child(3){width:33.3333%; display: none;}
+	article:nth-child(4){width:33.3333%; display: none;}
+	article:nth-child(5){width:50%;}
+	article:nth-child(6){width:50%;}
+	article:nth-child(7){width:66.6666%; display: none;}
+	article:nth-child(8){width:50%;}
+	article:nth-child(9){width:50%;}
+	article:nth-child(10){width:33.3333%; display: none;}
+	article:nth-child(11){width:50%;}
+	article:nth-child(12){width:50%;}
+}
+
+/*480~639까지 */
+@media screen and (min-width: 480px) and (max-width: 639px){
+	header {
+		position: relative;
+		width: 100%;
+		height: 130px;
+		display: none;
+	}
+	
+	nav {
+		display: none;
+	}
+		
+	section {
+		margin-left: 0;
+		width: 100%;
+	}
+	
+	article {
+		height: 150px;
+	}
+	
+		/*각 박스 크기지정*/
+	article:nth-child(1){width:100%; height: 300px;}
+	article:nth-child(2){width:100%;}
+	article:nth-child(3){width:33.3333%; display: none;}
+	article:nth-child(4){width:33.3333%; display: none;}
+	article:nth-child(5){width:50%;}
+	article:nth-child(6){width:50%;}
+	article:nth-child(7){width:66.6666%; display: none;}
+	article:nth-child(8){width:50%;}
+	article:nth-child(9){width:50%;}
+	article:nth-child(10){width:33.3333%; display: none;}
+	article:nth-child(11){width:50%;}
+	article:nth-child(12){width:50%;}
+}
+
+/*0~479까지 */
+@media screen and (max-width: 479px){
+	header {
+		position: relative;
+		width: 100%;
+		height: 80px;
+		display: none;
+	}
+	
+	nav {
+		display: none;
+	}
+		
+	section {
+		margin-left: 0;
+		width: 100%;
+	}
+	
+	article {
+		height: 150px;
+	}
+	
+		/*각 박스 크기지정*/
+	article:nth-child(1){width:100%; height: 300px;}
+	article:nth-child(2){width:100%;}
+	article:nth-child(3){width:33.3333%; display: none;}
+	article:nth-child(4){width:33.3333%; display: none;}
+	article:nth-child(5){width:50%;}
+	article:nth-child(6){width:50%;}
+	article:nth-child(7){width:66.6666%; display: none;}
+	article:nth-child(8){width:50%; display: none;}
+	article:nth-child(9){width:50%; display: none;}
+	article:nth-child(10){width:33.3333%; display: none;}
+	article:nth-child(11){width:50%; display: none;}
+	article:nth-child(12){width:50%; display: none;}
+}
+
+/*_______________________________________그외의 임의 추가__________________________________________*/
+
+.bg2 {
+	text-align: right;
+	background-color: #b62f2f;
+	color: white;
+	font-size: 30px;
+}
+.bg2:hover{
+	background-color: #000099;
+	transform: scale(1.1);
+}
