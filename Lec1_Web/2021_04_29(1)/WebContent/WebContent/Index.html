@@ -1,0 +1,93 @@
+<!--HTML 주석 방법 -->
+
+<!DOCTYPE html> <!-- HTML5 문서라는 표시  현재 웹 표준-->
+<html> <!-- HTML문서의 시작 -->
+	<head> <!--  문서의 정보를 가짐 -->
+		<meta charset="UTF-8"><!--주석, 인코딩 설정 -->
+		<title>HTML5 연습중... </title><!-- 제목 표시줄  설정  -->
+	</head>
+	
+	<body> <!--  실제로 보여지는 부분 (눈에 보이는 부분) -->
+		<h1>좋아하는 음식</h1>
+		<hr><!-- 빈태그 == 닫는 태그가 없는친구, 가로선을 그어준다 -->
+		<p>좋아하는 음식은 다음과 같습니다.</p> <!-- 문단 태그 -->
+		
+		<ul><!--  순서가 없는 목록 -->
+			<li><a href = "#sundae">순대국</a></li>
+			<li><a href = "#house">집밥</a></li>
+			<li><a href = "#sleep">수면</a></li>
+		</ul>
+		<ol><!-- 순서가 있는 목록 -->
+			<li>순대국</li><li>집밥</li><li>수면</li>
+		</ol>
+		
+		
+		<P>아래의 테이블 이미지를 클릭해 보세요</p>
+		<table style = "border: 2px solid tomato;"><!--  테이블 시작, sytle로 속성 정해줌  -->
+			<caption>먹고싶은 음식 테이블</caption><!-- 테이블의 제목 -->
+			<tr> <!--  1번째 행  -->
+				<th> 음식 명 </th> <th> 설명 </th> <th> 이미지 </th> <!-- 테이블 헤더 (th) -->
+			<tr> <!--  2번째 행 -->
+				<td> <mark>순대국</mark> </td> <td> 뜨끈~한 국밥 </td> <td> <a href = "https://map.naver.com/v5/search/%EB%8F%99%EB%91%90%EC%B2%9C%20%EC%88%9C%EB%8C%80%EA%B5%AD/place/21728036?c=14144862.5383840,4566563.0510399,15,0,0,0,dh&placePath=%2Fhome%3Fentry=pll&placeSearchOption=entry=pll%26filterId=r02250%26from=nx%26fromNxList=true%26sessionid=C9wxIoJTyqKh2u%252F3b8vcJQ%253D%253D" target = "_blank"><img src= "img1.jpg" alt = "순대국이미지 입니다." width = "200" height = "200"> </a></td> <!-- 테이블 데이터 (td) -->
+			<tr>
+				<td> 집밥 </td> <td> 집가고싶다 </td> <td> <img src= "img2.jpg" alt = "집이미지 입니다." width = "200" height = "200"> </td>
+			<tr>
+				<td> 수면 </td> <td> 졸령~ </td> <td> <img src= "img3.jpg" alt = "수면이미지 입니다." width = "200" height = "200"> </td>
+		</table>
+		
+		<br> <!-- 한칸 줄 넘김 -->
+		<hr>
+		<br>
+		<!-- 이미지 태그 사용 -->
+		<h2 id="sundae"> 순대국 입니다.</h2>
+		<br>
+		<img src= "img1.jpg" alt = "음식이미지 입니다." width = "200" height = "200"> <!--src 이미지, alt 깨진 이미지 대신 사진 설명텍스트 -->
+		<br> <!-- 한칸 줄 넘김 -->
+		<hr>
+		<br>
+
+		<details>
+			<summary>이 부분을 클릭해 보세요</summary>
+			<p>문단 태그 p 부분입니다</p>
+			<ol> <!--  순서가 있는 목록입니다.  -->
+				<li> <b>리스트1</b> </li>
+				<li> <strong>리스트2</strong> </li>
+				<li> <details><summary>&#127957;리스트3</summary></details><p>문단 태그 p 부분입니다</p> </li>
+			</ol>	
+		</details>
+
+		
+		<!-- <a href = "사이트주소"></a>로 하이퍼링크 -->
+		<p> 순대국 맛집은 <a href = "https://map.naver.com/v5/search/%EB%8F%99%EB%91%90%EC%B2%9C%20%EC%88%9C%EB%8C%80%EA%B5%AD/place/21728036?c=14144862.5383840,4566563.0510399,15,0,0,0,dh&placePath=%2Fhome%3Fentry=pll&placeSearchOption=entry=pll%26filterId=r02250%26from=nx%26fromNxList=true%26sessionid=C9wxIoJTyqKh2u%252F3b8vcJQ%253D%253D" target = "_blank">이 곳을</a> 클릭하세요</p>
+		
+		<br>
+		<hr>
+		<br>
+		
+		<h2 id = "house">집밥</h2>
+		<p>집밥 입니다.</p>
+		<br>
+		<hr>
+		<br><br>
+		<hr>
+		<br>
+		<h2 id = "sleep">수면</h2>
+		<p>수면입니다. &#9749;</p>
+		
+		<br>
+		<hr>
+		<br><br>
+		<hr>
+		<br>
+		
+		<iframe src="test.html" name="iframe_a" width="500" height = "500" title="iframe link">
+		</iframe>
+		
+		<ul>
+			<li><a href = "img1.jpg" target="iframe_a">순대국1</a></li>
+			<li><a href = "https://map.naver.com/v5/search/%EB%8F%99%EB%91%90%EC%B2%9C%20%EC%88%9C%EB%8C%80%EA%B5%AD/place/21728036?c=14144862.5383840,4566563.0510399,15,0,0,0,dh&placePath=%2Fhome%3Fentry=pll&placeSearchOption=entry=pll%26filterId=r02250%26from=nx%26fromNxList=true%26sessionid=C9wxIoJTyqKh2u%252F3b8vcJQ%253D%253D" target="iframe_a">순대국2</a></li>
+			<li><a href = "test2.html" target="iframe_a">순대국3</a></li>
+			<li><a href = "test.html" target="iframe_a">초기화</a></li>
+		</ul>
+	</body>
+</html><!-- HTML문서의 끝 -->
