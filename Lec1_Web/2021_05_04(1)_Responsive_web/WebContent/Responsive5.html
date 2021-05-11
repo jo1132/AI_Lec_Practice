@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>반응형 홈페이지 연습</title>
+		
+		<!-- IE 9이하 버전에서 미디어 쿼리 동작되도록 import해줌! -->
+		<script type="text/javascript" src="js/respond.min.js"></script>
+		
+		<link rel="stylesheet" href="Styles/Style.css" type="text/css">
+	</head>
+	<body>
+		<div id="wrapper">
+			<header class="col-12 col-xs-12">  <!-- 시멘틱 태그, 의미가 있는 태그, header는 머릿글 영역 -->
+				<div id="headerCon" class="col-12 col-xs-12">
+					<div id="logo"></div>
+					<div id="quick_con"></div>
+				</div>
+			</header>
+			
+			<aside class="col-12 col-xs-12 col-sm-3">
+				<ul class="hidden show-sm-block">
+					<li>이것은 내용입니다.</li>
+					<li>이것은 내용입니다.</li>
+					<li>이것은 내용입니다.</li>
+				</ul>
+				
+				<!-- ul태그가 나오거나 select가 나오거나 할 수 있다. -->
+				<select class="col-12 show-xs hidden-sm">
+					<option>이것은 내용입니다.</option>
+					<option>이것은 내용입니다.</option>
+					<option>이것은 내용입니다.</option>
+				</select>
+			</aside>
+			
+			<section class="col-12 col-xs-12 col-sm-9">
+				<article class="col-12 col-xs-12">
+					<figure>
+						<img class="img-responsive img-thumnail"src="images/img1.jpg">
+					</figure>
+					<p>
+						하우스 분양합니다.
+						<br>010-1234-5678
+					</p>
+				</article>
+				<article class="col-12 col-xs-12">
+					<figure>
+						<img class="img-responsive img-circle" src="images/img1.jpg">
+					</figure>
+					<p>
+						하우스 분양합니다.
+						<br>010-1234-5678
+					</p>
+				</article>
+
+			</section>
+			
+			<footer class="col-12 col-xs-12">
+				<div id="footerCon"></div>
+			</footer>
+		</div>
+	</body>
+</html>
