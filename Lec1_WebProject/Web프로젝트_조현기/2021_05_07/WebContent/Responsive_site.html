@@ -1,0 +1,129 @@
+<!DOCTYPEhtm>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>반응형 웹 페이지 작성</title>
+
+	<!-- 뷰포트 작성 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- 외부 스타일 적용 -->
+	<link rel="stylesheet" href="styles/Reset.css">
+	<link rel="stylesheet" href="styles/style.css">
+	
+	<script src="jquery-3.1.0.min.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			$("#quick_icon").bind("click", function(){
+				if($("#quick_menu ul").css("display") == "none"){
+					$("#quick_menu ul").slideDown();
+				}
+				else{
+					$("#quick_menu ul").slideUp();
+				}
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<div id="stage">
+		<header>
+			<h1 id="top"><img src="images/img_logo.png" alt="로고이미지"></h1>
+			
+			<!-- 퀵매뉴 -->
+			<div id="quick_menu">
+				<div id="quick_icon">
+					<img src="images/quick_menu.jpg" width="40" height="40">
+				</div>
+				<ul>
+					<li><a href="#">contact</a></li>
+					<li><a href="#">news</a></li>
+					<li><a href="#">sitemap2</a></li>
+				</ul>
+			</div>
+
+			<!-- 작은 메뉴부분 -->
+			<ul id="s_nav" class="cf">
+				<li class="contact"><a href="#">contact</a></li>
+				<li class="news"><a href="#">news</a></li>
+				<li class="sitemap2"><a href="#">sitemap2</a></li>
+			</ul>
+			
+			<p><img src="images/img_top.jpg"></p>
+		</header>
+		
+		<nav>
+			<!-- 주메뉴 부분(select 태그 사용) -->
+			<select>
+				<option>홈으로</option>
+				<option>MENU1</option>
+				<option>MENU2</option>
+				<option>MENU3</option>
+				<option>MENU4</option>
+				<option>MENU5</option>
+				<option>MENU6</option>
+			</select>
+			<!-- 주 메뉴 부분으로 ul태그를 사용한 부분이다. -->
+			<ul class="cf">
+				<li><a href="Responsive_site.html"><img alt="메뉴1" src="images/nav0_2.jpg" width="80" height="48"></a></li>
+				<li><a href="Menu1.html"><img alt="메뉴1" src="images/nav1.jpg" width="80" height="48"></a></li>
+				<li><a href="Menu2.html"><img alt="메뉴1" src="images/nav2.jpg" width="80" height="48"></a></li>
+				<li><a href="Menu3.html"><img alt="메뉴1" src="images/nav3.jpg" width="80" height="48"></a></li>
+				<li><a href="Menu4.html"><img alt="메뉴1" src="images/nav4.jpg" width="80" height="48"></a></li>
+				<li><a href="Menu5.html"><img alt="메뉴1" src="images/nav5.jpg" width="80" height="48"></a></li>
+			</ul>
+		</nav>
+		
+		<!-- 컨텐츠 영역 -->
+		<div id="contents">
+			<section id="news">
+				<h2>Section1</h2>
+				<article>
+					<h3>2021.05.07</h3>
+					<p id="font1">
+						Responsive web design (RWD) is an approach to web design that makes web pages render well on a variety of devices 
+						and window or screen sizes from minimum to maximum display size. Recent work also considers the viewer proximity 
+						as part of the viewing context as an extension for RWD. Content, design and performance are necessary across all devices to ensure 
+						usability and satisfaction.
+						A site designed with RWD adapts the layout to the viewing environment by using fluid, proportion-based grids, flexible images, 
+						and CSS3 media queries, an extension of the @media rule, in the following ways:
+					</p>
+				</article>
+				
+				<article>
+					<h3>2021.05.06</h3>
+					<p id="font2">
+						단말의 종류와 화면 크기에 실시간 반응하여 웹 페이지를 최적화된 화면 구성으로 보여주는 웹.
+						스마트폰 같은 모바일 단말의 이용량이 늘면서 데스크톱 위주의 기존 웹 사이트가 작은 화면에는 적당하지 않아 웹 페이지를 사용자의 화면 크기에 자동으로 맞춰 보여주는 기술이 필요하게 되었다.
+						반응형 웹 구현에 사용되는 대표적인 기술은 종속 스타일 시트 3 버전(CSS3: Cascading Style Sheets version 3)이다. 웹 문서 내 미디어 스타일 설정에 사용하는 미디어 쿼리(media query)를 
+						이용하면 단말 화면의 폭이나 높이에 따라 레이아웃이 자동으로 구성된다. 글자 크기를 자동으로 조정하기 위해서는 폰트의 고정 크기 단위인 px(픽셀)이 아닌 상대 단위인 em(엠)을 사용하면 된다. 
+						또 이미지 크기는 상대 비율 단위인 %를 이용하면 반응형 웹 화면을 구현할 수 있다.
+						화면 크기에 대응하여 웹 페이지의 레이아웃이 바뀌는 반응형 웹과 달리 웹 페이지를 다양한 화면 크기별로 미리 제작하여 보여주는 ‘적응형 웹(Adaptive web)' 방식도 있다.
+						[네이버 지식백과] 반응형 웹 [Responsive Web, 反應型-] (IT용어사전, 한국정보통신기술협회)
+					</p>
+				</article>
+			</section>
+			
+			<section id="information">
+				<h2>Section2</h2>
+				<ul>
+					<li><a href="#"><img src="images/pic1.gif"></a></li>
+					<li><a href="#"><img src="images/pic2.gif"></a></li>
+				</ul>
+			</section>
+		</div>
+		
+		<!-- 페이지 상단으로 가는 버튼 만들기 -->
+		<a id="pagetop" href="#top"><img src="images/pagetop.jpg" width="30px"></a>
+		
+		<footer>
+			<div>
+				<img src="images/img_logo2.png" alt="작은로고">
+				<p>반응형 사이트 구현<br>서울시 종로구 어딘가</p>
+				<small>Copyright &copy; 2021 Responsive Web Page. All rights Reserved.</small>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

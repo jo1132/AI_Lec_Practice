@@ -1,0 +1,886 @@
+/*웹폰트 적용 부분*/
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+/****************************************************************************************
+									BODY
+*****************************************************************************************/
+
+* {
+	scroll-behavior: smooth;
+}
+
+#stage{
+	background: url(../images/ori_bg_footer.jpg) repeat-y center
+}
+body {
+	width: 100%;
+	background-color: #fff;
+	color: #000;
+	font-family: 'Itim', 'Nanum Pen Script';
+	transition: all 0.5;
+}
+
+a {
+	color: #000;
+	text-decoration: none;
+}
+
+a:hover{
+	color: #333;
+	text-decoration: underline overline;
+}
+
+
+/****************************************************************************************
+									HEADER
+*****************************************************************************************/
+header {
+	text-aling: center;
+	position: relative; /*전 오브젝트를 기준으로해서 좌표이동한다*/
+	overflow: hidden; /*공간을 넘어가면 숨긴다.*/
+}
+header h1 {
+	width: 60%;
+	max-width: 380px; /*380px을 넘어가지 않겠다.*/
+	margin: 0 auto;
+	padding: 15px 5px 7px 5px;
+	transition: all 0.5s;
+}
+header h1 img {
+	width: 100%;
+	transition: all 0.5s;
+}
+
+/**************************************퀵메뉴 부분***********************/
+#quick_menu {
+	display: none;
+	position: absolute; /*어느 대상기준 고정값이다.*/
+	right: 5px;
+	cursor: pointer; /*마우스의 모양을 바꿀 수 있다.*/
+	transition: all 0.5;
+}
+#quick_menu ul {
+	display: none;
+	position: absolute;
+	left: -67px;
+}
+#quick_menu ul li{
+	margin: 0;
+	width: 95px;
+	list-style: none;
+	padding: 5px 10px;
+	background-color: rgba(255,255,255,0.7);
+	border-bottom: 1px solid black;
+}
+#quick_menu ul a:hover{
+	color: #80b3ff;
+	border-bottom: 1px solid #80b3ff;
+	text-decoration: none;
+}
+
+#s_nav {
+	position: relative;
+	margin-bottom: 15px;
+	left: 50%;
+	float: left;
+}
+#s_nav li {
+	float: left;
+	position: relative;
+	left: -46.5%;
+}
+#s_nav li a, #s_nav li a:hover{
+	display: block;
+	font-size: 90%;
+	margin-right: 20px;
+	padding-left: 15px;
+	letter-spacing: 0.1em;
+	text-decoration: none;
+}
+
+header.contact a, header.contact a:hover{
+	color: #0f1f3d;
+	background: url("../images/icn_contact.jpg") no-repeat left center;
+	transition: all 0.5s;
+}
+.contact a:hover{
+	color: #3366cc;
+}
+
+.news a, .news a:hover{
+	color: #0f1f3d;
+	background : url(../images/icn_news.jpg) no-repeat left center;
+	transition: all 0.5s;
+}
+.news a:hover{
+	color: #3366cc;
+}
+
+
+.sitemap2 a, .sitemap2 a:hover{
+	color: #0f1f3d;
+	background : url(../images/icn_sitemap.jpg) no-repeat left center;
+	transition: all 0.5s;
+}
+.sitemap2 a:hover{
+	color: #3366cc;
+}
+
+header p {
+	width: 95%;
+	margin: 10px auto 10px auto;
+}
+header p img {
+	width: 100%;
+	height: auto;
+	max-width: 960px;
+}
+
+
+/****************************************************************************************
+									NAV
+*****************************************************************************************/
+nav {
+	width: 95%;
+	margin: 0 auto 5px auto;
+	max-width: 912px;
+}
+nav ul {
+	width: 100%;
+	margin-bottom: 15px;
+}
+nav ul li {
+	text-align: center;
+	float: left;
+	width: 50%;
+	border-bottom: 1px solid black;
+}
+nav il li a {
+	display: block; /*부모 넓이를 다 쓰겠다.*/
+	width: 100%;
+}
+nav select {
+	display: none;
+}
+
+/****************************************************************************************
+									봄문 영역입니다.(contents)-공통부분
+*****************************************************************************************/
+#contents {
+	
+	background: rgba(255,255,255, 0.3) url(../images/bg.jpg) no-repeat right center;
+	background-size: cover;
+	padding-bottom: 80px;
+	border-bottom: 10px solid #3366cc;
+	margin-left: 5px;
+	max-width: 932px;
+}
+
+/****************************************************************************************
+									봄문 영역입니다.(contents)-뉴스 영역
+*****************************************************************************************/
+@keyframes ani1 {
+	0%{
+	 opacity: 0.0;
+	 color: white;
+	 margin-left: -50%;
+	}
+	100%{
+		opacity: 1.0;
+		margin-left: 5px;
+	}
+}
+
+#news {
+	padding-top: 5px;
+	margin-left: 5px;
+}
+#news h2 {
+	font-size: 1.2em;
+	margin: 0 10px 15px 5px;
+	padding-bottom: 10px;
+	letter-spacing: 0.1em;
+	color: rgb(103, 156, 198);
+	animation: ani1 2s;
+	background: url(../images/bg_headerLine.jpg) repeat-x left bottom;
+	background-color: rgba(255,255,255, 0.8);
+}
+
+#news article h3 {
+	font-size: 0.7em;
+	padding-left: 20px;
+	margon-bottom: 10px;
+	background: url(../images/icn_arrow.png) no-repeat left center;
+}
+#news article p {
+	font-size: 0.9em;
+	margin: 0 15px 20px 10px;
+	padding: 12px;	
+	line-height: 1.5em;
+	text-align: justify; /*justify 양쪽 정렬이다. 양쪽 끝이 맞춰짐.*/
+	border: 1px dotted #142952;
+	border-radius: 10px;
+	background-color: rgba(255,255,255, 0.8);
+}
+
+
+/****************************************************************************************
+									봄문 영역입니다.(contents)-information 영역 (이미지)
+*****************************************************************************************/
+#information {
+	margin-left: 5px;
+}
+#information h2{		/*위의 news에서의 h2와 같지만 보기좋게 영역을 나눴기 때문에 똑같이 반복해서 써준다.*/
+	font-size: 1.2em;
+	margin: 0 10px 15px 5px;
+	padding-top: 0px;
+	padding-bottom: 10px;
+	letter-spacing: 0.1em;
+	color: rgb(103, 156, 198);
+	animation: ani1 2s;
+	background: url(../images/bg_headerLine.jpg) repeat-x left bottom;
+	background-color: rgba(255,255,255, 0.8);
+}
+#information ul{
+	max-width: 500px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#information ul li {
+	width: 95%;
+	margin: 5px auto;
+}
+#information ul li a {
+	display: block;
+}
+#information ul li a img{
+	width: 100%;
+	height: auto;
+}
+
+
+/****************************************************************************************
+									Menu1의 resent-new부분입니다. 
+*****************************************************************************************/
+
+#contents_menu1 {
+	
+	background: rgba(255,255,255, 0.3) url(../images/bg.jpg) no-repeat right center;
+	background-size: cover;
+	padding-top: 30px;
+	padding-bottom:0;
+	border-bottom: 10px solid #3366cc;
+	margin-left: 5px;
+	max-width: 932px;
+	margin: 0 auto;
+	
+}
+
+
+
+#resent_news {
+	padding-top: 5px;
+	margin-left: 5px;
+}
+#resent_news h1 {
+	font-size: 35px;
+	
+	margin:10px 25%;
+	min-width: 50%;
+	color: rgb(103, 156, 198);
+	text-align: center;
+	border: 1px solid #142952;
+	background-color: rgba(255,255,255, 0.8);
+	border-color: #000;
+}
+#resent_news h2 {
+	font-size: 1.5em;
+	margin: 0 12px 15px 5px;
+	padding: 5px 0 10px 5px;
+	letter-spacing: 0.1em;
+	color: rgb(103, 156, 198);
+	animation: ani1 2s;
+	background: url(../images/bg_headerLine.jpg) repeat-x left bottom;
+	background-color: rgba(255,255,255, 0.8);
+}
+#resent_news article  {
+	margin-bottom: 20px;
+}
+#resent_news article h3 {
+	font-size: 0.7em;
+	padding-left: 20px;
+	margon-bottom: 10px;
+	background: url(../images/icn_arrow.png) no-repeat left center;
+}
+
+#resent_news div{
+	margin: 0 10px 10px 0px;
+	border: 1px dotted #142952;
+	border-radius: 10px;
+	background-color: rgba(255,255,255, 0.8);
+	
+}
+
+#resent_news article p {
+	font-size: 1.2em;
+	margin: 0 15px 0 10px;
+	padding: 12px;	
+	line-height: 1.5em;
+	text-align: justify; /*justify 양쪽 정렬이다. 양쪽 끝이 맞춰짐.*/
+	color: rgb(11, 38, 61);
+}
+#resent_news div #mark{
+	border: 1px solid #142952;
+	background-color: rgb(11, 38, 61);
+	color: white;
+	max-width: 50px;
+	padding: 5px 10px;
+}
+#resent_news #due_to {
+	font-size: 1.0em;
+}
+#resent_news article a {
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+}
+#resent_news article #riselink {
+	text-align: center;
+	border: 1px solid #142952;
+	border-color: #fff;
+	background-color: rgb(232, 44, 30);
+	max-width: 150px;
+	margin: 0 auto 10px auto;
+	font-size: 1.5em;
+}
+#resent_news article #riselink:hover{
+	transform: scale(1.2);
+}
+
+
+
+/****************************************************************************************
+									Menu2의 slide show부분입니다. 
+*****************************************************************************************/
+#media {box-sizing:border-box}
+
+/* Slideshow container */
+#media .slideshow-container {
+  min-width: 90%;
+  position: relative;
+  margin-right: 10px;
+}
+
+/* Hide the images by default */
+#media .mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+#media .prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+#media .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+#media .prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+#media .text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+#media .numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+#media .dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+#media .active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+#media .fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+/****************************************************************************************
+									Menu2의 midea부분입니다. 
+*****************************************************************************************/
+
+#media {
+	background-size: cover;
+	padding-top: 30px;
+	padding-bottom: 80px;
+
+	margin-left: 5px;
+	max-width: 932px;
+	margin: 0 auto;
+	padding-top: 5px;
+	margin-left: 5px;
+}
+#media h1 {
+	font-size: 35px;
+	
+	margin:10px 25%;
+	min-width: 50%;
+	color: rgb(103, 156, 198);
+	text-align: center;
+	border: 1px solid #142952;
+	background-color: rgba(255,255,255, 0.8);
+	border-color: #000;
+}
+#media h2 {
+	font-size: 1.5em;
+	margin: 0 12px 15px 5px;
+	padding: 5px 0 10px 5px;
+	letter-spacing: 0.1em;
+	color: rgb(103, 156, 198);
+	animation: ani1 2s;
+	background: url(../images/bg_headerLine.jpg) repeat-x left bottom;
+	background-color: rgba(255,255,255, 0.8);
+}
+#media article  {
+	margin-bottom: 20px;
+}
+
+#media div{
+	margin: 20px 10px;
+	border: 1px dotted #142952;
+	border-radius: 10px;
+	background-color: rgba(255,255,255, 0.8);
+}
+#media .slideshow-container {
+  margin-left: 0;
+}
+#media .numbertext{
+	color: rgb(103, 156, 198);
+	font-size: 20px;
+}
+#media .text{
+	color: rgb(103, 156, 198);
+	max-width: 100px;
+}
+
+
+/****************************************************************************************
+									Menu3의 gameinfo부분입니다. 
+*****************************************************************************************/
+
+#gameinfo {
+	background-size: cover;
+	padding-top: 30px;
+	padding-bottom: 80px;
+
+	margin-left: 5px;
+	max-width: 932px;
+	margin: 0 auto;
+	padding-top: 5px;
+	margin-left: 5px;
+}
+#gameinfo h1 {
+	font-size: 35px;
+	
+	margin:10px auto;
+	max-width: 50%;
+	color: rgb(103, 156, 198);
+	text-align: center;
+	border: 1px solid #142952;
+	background-color: rgba(255,255,255, 0.8);
+	border-color: #000;
+}
+#gameinfo h2 {
+	font-size: 1.5em;
+	margin: 0 12px 15px 5px;
+	padding: 5px 0 10px 5px;
+	letter-spacing: 0.1em;
+	color: rgb(103, 156, 198);
+	animation: ani1 2s;
+	background: url(../images/bg_headerLine.jpg) repeat-x left bottom;
+	background-color: rgba(255,255,255, 0.8);
+}
+#gameinfo div{
+	margin: 20px 10px;
+	border: 1px dotted #142952;
+	border-radius: 10px;
+	background-color: rgba(255,255,255, 0.8);
+}
+#infotable {
+	margin: 20px auto;
+	max-width: 70%;
+	text-align: right;
+
+	border: 1px solid #000;
+}
+#infotable tr{
+	background-color: rgb(9, 64, 94);
+}
+#hyperlinks {
+	 background-color: rgba(255,255,255, 0.8);
+	 word-break: break-all;
+	 font-size: 1.2em;
+	 text-align: center;
+	 font-color: rgb(9, 64, 94);
+}
+#hyperlinks a{
+	 font-color: rgb(9, 64, 94);
+}
+#hyperlinks a:hover{
+	 text-decoration: underline;
+}
+
+#infinitloop {
+	background-color: rgb(9, 64, 94);
+	color: rgb(250, 252, 5);
+	min-width: 100%;
+	max-height: 280px;
+	height: 300px;
+	text-align: center;
+	font-size: 1.2em;
+}
+#infinitloop hr{
+	margin: 10px 10px;
+}
+
+
+/****************************************************************************************
+									Menu4의 #pcspec부분입니다. 
+*****************************************************************************************/
+
+#pcspec {
+	background-size: cover;
+	padding-top: 30px;
+	padding-bottom: 80px;
+
+	margin-left: 5px;
+	max-width: 932px;
+	margin: 0 auto;
+
+	padding-top: 5px;
+	margin-left: 5px;
+}
+#pcspec h1 {
+	font-size: 35px;
+	
+	margin:10px auto;
+	max-width: 50%;
+	color: rgb(103, 156, 198);
+	text-align: center;
+	border: 1px solid #142952;
+	background-color: rgba(255,255,255, 0.8);
+	border-color: #000;
+}
+#pcspec h2 {
+	font-size: 1.5em;
+	margin: 0 12px 15px 5px;
+	padding: 5px 0 10px 5px;
+	letter-spacing: 0.1em;
+	color: rgb(103, 156, 198);
+	animation: ani1 2s;
+	background: url(../images/bg_headerLine.jpg) repeat-x left bottom;
+	background-color: rgba(255,255,255, 0.8);
+}
+#pcspec div{
+	margin: 20px 10px;
+	border: 1px dotted #142952;
+	border-radius: 10px;
+	background-color: rgba(255,255,255, 0.8);
+}
+#specs div{
+	
+		max-width: 55%;
+		text-align: center;
+		min-height: 25px;
+		background: none;
+		border: none;
+		margin: 10px auto;
+}
+#pcspec h3{
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size: 1.5em;
+	background-color: rgb(9, 64, 94);
+	color: #fff;
+	min-width: 21%;
+	text-align: center;
+	float: left;
+	margin: auto 1%;
+	border: 1px dotted #142952;
+	border-radius: 10px;
+}
+#specs {
+	max-width: 95%;
+	margin: 0, auto;
+}
+
+#specs iframe{
+	background: url(../images/spec1.jpg) no-repeat center;
+	background-size: 100% 100%;
+}
+
+/****************************************************************************************
+									Menu5의 부분입니다. 
+*****************************************************************************************/
+
+#self {
+	background-size: cover;
+	padding-top: 30px;
+	padding-bottom: 80px;
+
+	margin-left: 5px;
+	max-width: 932px;
+	margin: 0 auto;
+
+	padding-top: 5px;
+	margin-left: 5px;
+}
+#self h1 {
+	font-size: 35px;
+	
+	margin:10px auto;
+	max-width: 50%;
+	color: rgb(103, 156, 198);
+	text-align: center;
+	border: 1px solid #142952;
+	background-color: rgba(255,255,255, 0.8);
+	border-color: #000;
+}
+#self h2 {
+	font-size: 1.5em;
+	margin: 0 12px 15px 5px;
+	padding: 5px 0 10px 5px;
+	letter-spacing: 0.1em;
+	color: rgb(103, 156, 198);
+	animation: ani1 2s;
+	background: url(../images/bg_headerLine.jpg) repeat-x left bottom;
+	background-color: rgba(255,255,255, 0.8);
+}
+#self div{
+	margin: 20px 10px;
+	border: 1px dotted #142952;
+	border-radius: 10px;
+	
+}
+#pic{
+	float: left;
+	width: 45%;
+	margin-left:auto;
+	margin-right:auto;
+}
+#introduce{
+	background-color: rgb(9, 64, 94);
+	float: right;
+	width: 45%;
+	font-size: 1.5em;
+	padding: 5px;
+	height: 200px;
+	color: rgb(250, 252, 5);
+	margin-left:auto;
+	margin-right:auto;
+}
+
+/****************************************************************************************
+									pagetop (페이지 상단으로 가는 버튼)
+*****************************************************************************************/
+#pagetop {
+	position: fixed;
+	right: 5px;
+	bottom: 5px;
+}
+/****************************************************************************************
+									footer
+*****************************************************************************************/
+footer div {
+	margin: 20px;
+	text-align: center;
+}
+footer div p {
+	font-size: 0.8em;
+	line-height: 1.6em;
+}
+footer div small {
+	font-size: 0.8em;
+}
+
+
+
+/****************************************************************************************
+									미디어 쿼리 만들기(반응형)
+*****************************************************************************************/
+/*0~450인 너비를 가진 모든 기기일때*/
+@media all and (max-width: 450px){
+	header {
+		position: static;
+		transition: all 0.5s;
+	}
+	header h1{
+		float: left;
+		width: 200px;
+		padding: 15px 5px 7px 10px;
+	}
+	
+	#s_nav{
+		display: none;
+	}
+	
+	/************퀵메뉴 추가부분**********/
+	#quick_menu {
+		display: block;
+	}
+	
+	nav select{
+		display: block;
+		width: 100%;
+		margin: 0 auto 20px auto;
+	}
+	nav ul{
+		display: none;
+	}
+	#news article p{
+		line-height: 1.4em;
+		font-size: 0.8em;
+		margin: 13px 18px 18px 8px;
+		padding: 11px;
+		border-radius: 8px;
+	}
+	
+	#resent_news{
+		width: 100%;
+	}
+}
+
+/*451~649PX 사이는 기본적용이라 생각한다.*/
+@media all and (min-width: 650px) and (max-width: 960px){
+	header h1{
+		width: 50%;
+	}
+	nav ul li {
+		width: 33.33%;
+	}
+	#contents {
+		height: 130%;
+		padding-top: 30px;
+	}
+	#news {
+		margin-top: 30px;
+	}
+	
+	#resent_news{
+		width: 100%;
+	}
+}
+
+@media all and (min-width: 961px){
+	header {
+		position: static;
+		overflow: hidden;
+	}
+	header h1 {
+		width: 280px;
+		text-align: left;
+		padding: 15px 5px ;
+		float: left;
+	}
+	header h1 img {
+		width: 100%;
+	}
+	
+	#s_nav{
+		margin-top: 20px;
+		position: statick;
+		left: 40%;
+	}
+	
+	#s_nav li {
+		float: left;
+		position: static;
+	}
+	
+	header, nav, #contents{
+		width: 961px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	#contents {
+		height: 650px;
+		padding-top: 30px;
+	}
+	
+	#news {
+		width: 49%;
+		float: left;
+	}
+	#information {
+		width: 49%;
+		float: right;
+	}
+	#information h2{
+		margin-top: 5px;
+	}
+	#information img{
+		margin-top:10px;
+		margin-bottom: 10px;
+	}
+	#information img:hover{
+		transform: scale(1.2);
+	}
+	nav ul li {
+		width: 16.66%;
+	}
+	#resent_news{
+		width: 100%;
+	}
+}

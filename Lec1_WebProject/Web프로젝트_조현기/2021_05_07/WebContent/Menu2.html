@@ -1,0 +1,247 @@
+<!DOCTYPEhtm>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>반응형 웹 페이지 작성</title>
+
+	<!-- 뷰포트 작성 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- 외부 스타일 적용 -->
+	<link rel="stylesheet" href="styles/Reset.css">
+	<link rel="stylesheet" href="styles/style.css">
+	
+	<script src="jquery-3.1.0.min.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			$("#quick_icon").bind("click", function(){
+				if($("#quick_menu ul").css("display") == "none"){
+					$("#quick_menu ul").slideDown();
+				}
+				else{
+					$("#quick_menu ul").slideUp();
+				}
+			});
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+	<div id="stage">
+		<header>
+			<h1 id="top"><img src="images/img_logo.png" alt="로고이미지"></h1>
+			
+			<!-- 퀵매뉴 -->
+			<div id="quick_menu">
+				<div id="quick_icon">
+					<img src="images/quick_menu.jpg" width="40" height="40">
+				</div>
+				<ul>
+					<li><a href="#">contact</a></li>
+					<li><a href="#">news</a></li>
+					<li><a href="#">sitemap2</a></li>
+				</ul>
+			</div>
+
+			<!-- 작은 메뉴부분 -->
+			<ul id="s_nav" class="cf">
+				<li class="contact"><a href="#">contact</a></li>
+				<li class="news"><a href="#">news</a></li>
+				<li class="sitemap2"><a href="#">sitemap2</a></li>
+			</ul>
+			
+			<p><img src="images/img_top.jpg"></p>
+		</header>
+		
+		<nav>
+			<!-- 주메뉴 부분(select 태그 사용) -->
+			<select>
+				<option>홈으로</option>
+				<option>MENU1</option>
+				<option>MENU2</option>
+				<option>MENU3</option>
+				<option>MENU4</option>
+				<option>MENU5</option>
+				<option>MENU6</option>
+			</select>
+			<!-- 주 메뉴 부분으로 ul태그를 사용한 부분이다. -->
+			<ul class="cf">
+				<li><a href="Responsive_site.html"><img alt="메뉴1" src="images/nav0_2.jpg" width="80" height="48"></a></li>
+				<li><a href="Menu1.html"><img alt="메뉴1" src="images/nav1.jpg" width="80" height="48"></a></li>
+				<li><a href="Menu2.html"><img alt="메뉴1" src="images/nav2.jpg" width="80" height="48"></a></li>
+				<li><a href="Menu3.html"><img alt="메뉴1" src="images/nav3.jpg" width="80" height="48"></a></li>
+				<li><a href="Menu4.html"><img alt="메뉴1" src="images/nav4.jpg" width="80" height="48"></a></li>
+				<li><a href="Menu5.html"><img alt="메뉴1" src="images/nav5.jpg" width="80" height="48"></a></li>
+			</ul>
+		</nav>
+		
+		<!-- 컨텐츠 영역 -->
+		<div id="contents">
+			<section id="media">
+				<h2>미디어</h2>
+				<article>
+						<!-- Slideshow container -->
+							<div class="slideshow-container">
+							
+							  <!-- Full-width images with number and caption text -->
+							  <div class="mySlides fade">
+							    <div class="numbertext">1 / 17</div>
+							   <img src="images/pic1.gif" width="100%">
+							    <div class="text">gif1</div>
+							  </div>
+							  <div class="mySlides fade">
+							    <div class="numbertext">2 / 17</div>
+							   <img src="images/pic2.gif" width="100%">
+							    <div class="text">gif2</div>
+							  </div>
+							  <div class="mySlides fade">
+							    <div class="numbertext">3 / 17</div>
+							   <img src="images/pic3.gif" width="100%">
+							    <div class="text">gif3</div>
+							  </div>
+							  <div class="mySlides fade">
+							    <div class="numbertext">4 / 17</div>
+							   <img src="images/pic4.gif" width="100%">
+							    <div class="text">gif4</div>
+							  </div>
+							  <div class="mySlides fade">
+							    <div class="numbertext">5 / 17</div>
+							   <img src="images/pic5.gif" width="100%">
+							    <div class="text">gif5</div>
+							  </div>
+							  <div class="mySlides fade">
+							    <div class="numbertext">6 / 17</div>
+							   <img src="images/pic6.gif" width="100%">
+							    <div class="text">gif6</div>
+							  </div>
+							  <div class="mySlides fade">
+							    <div class="numbertext">7 / 17</div>
+							   <img src="images/pic7.gif" width="100%">
+							    <div class="text">gif7</div>
+							  </div>
+							  <div class="mySlides fade">
+							    <div class="numbertext">8 / 17</div>
+							   <img src="images/pic8.gif" width="100%">
+							    <div class="text">gif8</div>
+							  </div>
+							  <div class="mySlides fade">
+							    <div class="numbertext">9 / 17</div>
+							   <img src="images/pic9.gif" width="100%">
+							    <div class="text">gif9</div>
+							  </div>
+							  <div class="mySlides fade">
+							    <div class="numbertext">10 / 17</div>
+							   <img src="images/pic10.gif" width="100%">
+							    <div class="text">gif10</div>
+							  </div>
+							  <div class="mySlides fade">
+							    <div class="numbertext">11 / 17</div>
+							   <img src="images/pic11.gif" width="100%">
+							    <div class="text">gif11</div>
+							  </div>
+							  <div class="mySlides fade">
+							    <div class="numbertext">12 / 17</div>
+							   <img src="images/pic12.gif" width="100%">
+							    <div class="text">gif12</div>
+							  </div>
+							  <div class="mySlides fade">
+							    <div class="numbertext">13 / 17</div>
+							   <img src="images/pic13.gif" width="100%">
+							    <div class="text">gif13</div>
+							  </div>
+							  <div class="mySlides fade">
+							    <div class="numbertext">14 / 17</div>
+							   <img src="images/pic14.gif" width="100%">
+							    <div class="text">gif14</div>
+							  </div>
+							  <div class="mySlides fade">
+							    <div class="numbertext">15 / 17</div>
+							   <img src="images/pic15.gif" width="100%">
+							    <div class="text">gif15</div>
+							  </div>
+							  <div class="mySlides fade">
+							    <div class="numbertext">16 / 17</div>
+							   <img src="images/pic16.gif" width="100%">
+							    <div class="text">gif16</div>
+							  </div>
+							  <div class="mySlides fade">
+							    <div class="numbertext">17 / 17</div>
+							   <img src="images/pic17.gif" width="100%">
+							    <div class="text">gif17</div>
+							  </div> 
+							
+							  
+							  <!-- Next and previous buttons -->
+							  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+							  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+							</div>
+							<br>
+							
+							<!-- The dots/circles -->
+							<div style="text-align:center;" id="slideshowdots">
+							  <span class="dot" onclick="currentSlide(1)"></span>
+							  <span class="dot" onclick="currentSlide(2)"></span>
+							  <span class="dot" onclick="currentSlide(3)"></span>
+							  <span class="dot" onclick="currentSlide(4)"></span>
+							  <span class="dot" onclick="currentSlide(5)"></span>
+							  <span class="dot" onclick="currentSlide(6)"></span>
+							  <span class="dot" onclick="currentSlide(7)"></span>
+							  <span class="dot" onclick="currentSlide(8)"></span>
+							  <span class="dot" onclick="currentSlide(9)"></span>
+							  <span class="dot" onclick="currentSlide(10)"></span>
+							  <span class="dot" onclick="currentSlide(11)"></span>
+							  <span class="dot" onclick="currentSlide(12)"></span>
+							  <span class="dot" onclick="currentSlide(13)"></span>
+							  <span class="dot" onclick="currentSlide(14)"></span>
+							  <span class="dot" onclick="currentSlide(15)"></span>
+							  <span class="dot" onclick="currentSlide(16)"></span>
+							  <span class="dot" onclick="currentSlide(17)"></span>
+							</div>
+
+					<script>
+						var slideIndex = 1;
+						showSlides(slideIndex);
+				
+						// Next/previous controls
+						function plusSlides(n) {
+						  showSlides(slideIndex += n);
+						}
+				
+						// Thumbnail image controls
+						function currentSlide(n) {
+						  showSlides(slideIndex = n);
+						}
+				
+						function showSlides(n) {
+						  var i;
+						  var slides = document.getElementsByClassName("mySlides");
+						  var dots = document.getElementsByClassName("dot");
+						  if (n > slides.length) {slideIndex = 1}
+						  if (n < 1) {slideIndex = slides.length}
+						  for (i = 0; i < slides.length; i++) {
+						      slides[i].style.display = "none";
+						  }
+						  for (i = 0; i < dots.length; i++) {
+						      dots[i].className = dots[i].className.replace(" active", "");
+						  }
+						  slides[slideIndex-1].style.display = "block";
+						  dots[slideIndex-1].className += " active";
+						}
+					</script>
+				</article>
+			</section>
+			<!-- 페이지 상단으로 가는 버튼 만들기 -->
+			<a id="pagetop" href="#top"><img src="images/pagetop.jpg" width="30px"></a>
+		</div>
+		<footer>
+			<div>
+				<img src="images/img_logo2.png" alt="작은로고">
+				<p>반응형 사이트 구현<br>서울시 종로구 어딘가</p>
+				<small>Copyright &copy; 2021 Responsive Web Page. All rights Reserved.</small>
+			</div>
+		</footer>
+		</div>
+</body>
+</html>
