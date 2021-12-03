@@ -1,0 +1,112 @@
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="style.css">
+<title>동네마켓_판매자</title>
+	<script
+		src="https://kit.fontawesome.com/2d323a629b.js"
+		crossorigin="anonymous"
+	></script>
+</head>
+<body>
+	<input type="checkbox" id="menuicon">
+	<header>
+		<nav class="navbar">
+			<div class="navbar_logo">
+				<i class="fas fa-carrot"></i>
+				<a href="index2.html">동네마켓_판매자</a>
+				
+				<input style="font-size: 16px; width: 400px; height: 40px; outline: none; padding: 10px; border: 0; margin-left: 100px;" type="text" placeholder="과일/가게/할인">
+				<button style="width: 50px; height: 40px; background: #d49466; outline: none; color: #fff; border: 0;" type="button">검색</button>
+			</div>
+			
+			<label for="menuicon" class="menubtn">
+				<span></span>
+				<span></span>
+				<span></span>
+			</label>
+		</nav>
+	</header>
+
+	<div class="container"> 
+		<div class="contents">
+			<div class="store_image">
+			<img class="store_main_image" src="img/딸기.jpeg" width="250" height="250">
+			<p>행복청과</p>
+			<img class="edit" src="img/연필.png" width="50" height="50">
+			</div>
+			
+			<div class="store_contents">
+			★★★★☆(평점 4.0/5.0)<br><br>판매중 7개 | 방문중 5명<br><br>서울특별시 종로구 OO빌딩 101호<br>010-XXXX-XXXX로 전화주세요!<br><br><p class="store_contents_line">샤인머스켓 반값특가! (~10월 11일까지!)<br>오늘 방문하시면 사과 한개씩 드려요!<br></p>
+			<img class="edit2" src="img/연필.png" width="50" height="50">
+			</div>
+			
+		</div>
+		
+		<div class="item_btn">
+			<div class="item_upload" onclick="location.href='itemUpload.html'">
+				<div style="width:80px; height:60px; margin: 10px 0px 10px 150px; float: left;">
+					<img src="img/카메라.png" width="80" height="60">
+				</div>
+				<div style="width:180px; height:60px; float: left; margin: 10px 40px 0px 0px; font-size:1.0em; padding: 10px 0 0 0;">
+					<p>제품 올리기</p>
+				</div>
+			</div>
+			
+			<div class="event_upload">
+			<img src="img/달력2.png" width="60" height="60">
+			이벤트 올리기
+			</div>
+		</div>
+		
+		<div class="list">
+			<div style="width:350px; height: 350px; border: 1px solid gray; float:left; margin: 50px 50px 10px 200px;">
+					<img src="img/샤인머스켓.png" width="300" height="300"><h1>샤인머스켓</h1>
+			</div>
+			
+			<div style="width:350px; height: 350px; border: 1px solid gray; float:right; margin: 50px 150px 10px 50px;">
+					<img src="img/사과.jpg" width="300" height="300"><h1>충주 부사</h1>
+			</div>
+			
+			<div style="width:350px; height: 350px; border: 1px solid gray; float:left; margin: 100px 50px 10px 200px;">
+					<img src="img/포도포도.jpeg" width="300" height="300"><h1>가을 3색 포도</h1>
+			</div>
+			
+			<div style="width:350px; height: 350px; border: 1px solid gray; float:right; margin: 100px 150px 10px 50px;">
+					<img src="img/홍시.png" width="300" height="300"><h1>시골 연시</h1>
+			</div>
+		</div>
+		
+		<div class="sidebar">
+			<ul class="sidebar_menu">
+				<li><a href="seller.html">마이마켓</a></li>
+				<li><a href="chat.html">채팅목록</a></li>
+				<li><a href="#">매출장부</a></li>
+				<li><a href="index.html">로그아웃</a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<!-- 페이지 상단으로 가는 버튼 -->
+	<a id="pagetop" href="#top"><img src="pagetop.png"></a>
+	
+	<footer>
+		<div class="corp_area">
+			<ul class="list_corp">
+				<li class="corp_item"><a href="#">동네<br>마켓</a></li>
+				<li class="corp_item"><a href="#">회사소개</a></li> 
+				<li class="corp_item"><a href="#">인재채용</a></li>
+				<li class="corp_item"><a href="#">제휴제안</a></li>
+				<li class="corp_item"><a href="#">이용약관</a></li>
+				<li class="corp_item"><a href="#">개인정보처리방침</a></li>
+			</ul>
+		</div>
+		
+		<div class="notice_area">
+		<p>대표 : 김대표<br>주소 : 서울특별시 종로구 청와대대로1<br>사업자등록번호 : 123-45-678910</p>
+		<small>Copyright &copy; 동네마켓(주). 
+		All rights Reserved.</small>
+		</div>
+	</footer>
+</body>
+</html>

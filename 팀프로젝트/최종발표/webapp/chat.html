@@ -1,0 +1,113 @@
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="style.css">
+<title>동네마켓_판매자</title>
+	<script
+		src="https://kit.fontawesome.com/2d323a629b.js"
+		crossorigin="anonymous"
+	></script>
+</head>
+<body>
+	<input type="checkbox" id="menuicon">
+	<header>
+		<nav class="navbar">
+			<div class="navbar_logo">
+				<i class="fas fa-carrot"></i>
+				<a href="index2.html">동네마켓_판매자</a>
+				<button class="item_submit_btn" type="button" onclick="location.href='chat.html'">채팅목록</button>
+			</div>
+
+			<label for="menuicon" class="menubtn">
+				<span></span>
+				<span></span>
+				<span></span>
+			</label>
+		</nav>
+	</header>
+
+	<div class="container">
+		<div class="list2">
+			<div class="combobox">
+				<form>
+					<select name="stats">
+						<option value="new">최신순</option>
+						<option value="old">오래된순</option>
+					</select>
+				</form>
+			</div>
+			
+			<div class="chat_list">
+				<div class="chat_image" OnClick="location.href='chat2.html'">
+					<img src="img/샤인머스켓.png">
+				</div>
+				<div class="chat_contents" OnClick="location.href='chat2.html'">
+					<small>2021.09.25 14:03</small>
+					<h1>지우현우맘</h1><br>
+					<p>그럼 샤인머스켓 하나 예약할게요!</p>
+				</div>
+				
+				<div class="chat_image">
+					<img src="img/사과.jpg">
+				</div>
+				<div class="chat_contents">
+					<small>2021.09.25 09:07</small>
+					<h1>며눌</h1><br>
+					<p>부사 오늘 싱싱한가요?</p>
+				</div>
+				
+				<div class="chat_image">
+					<img src="img/샤인머스켓.png">
+				</div>
+				<div class="chat_contents">
+					<small>2021.09.24 20:07</small>
+					<h1>코쿠뎅이</h1><br>
+					<p>넵 내일 오후에 가지러 갈게요!</p>
+				</div>
+				
+				<div class="chat_image">
+					<img src="img/홍시.png">
+				</div>
+				<div class="chat_contents">
+					<small>2021.09.24 12:48</small>
+					<h1>아따파파</h1><br>
+					<p>네 한상자 부탁드려요~~^^</p>
+				</div>
+			</div>
+			
+		</div>
+		
+		<div class="sidebar">
+			<ul class="sidebar_menu">
+				<li><a href="seller.html">마이마켓</a></li>
+				<li><a href="chat.html">채팅목록</a></li>
+				<li><a href="#">매출장부</a></li>
+				<li><a href="index.html">로그아웃</a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<!-- 페이지 상단으로 가는 버튼 -->
+	<a id="pagetop" href="#top"><img src="pagetop.png"></a>
+	
+	<footer>
+		<div class="corp_area">
+			<ul class="list_corp">
+				<li class="corp_item"><a href="#">동네<br>마켓</a></li>
+				<li class="corp_item"><a href="#">회사소개</a></li> 
+				<li class="corp_item"><a href="#">인재채용</a></li>
+				<li class="corp_item"><a href="#">제휴제안</a></li>
+				<li class="corp_item"><a href="#">이용약관</a></li>
+				<li class="corp_item"><a href="#">개인정보처리방침</a></li>
+			</ul>
+		</div>
+		
+		<div class="notice_area">
+		<p>대표 : 김대표<br>주소 : 서울특별시 종로구 청와대대로1<br>사업자등록번호 : 123-45-678910</p>
+		<small>Copyright &copy; 동네마켓(주). 
+		All rights Reserved.</small>
+		</div>
+	</footer>
+	
+</body>
+</html>

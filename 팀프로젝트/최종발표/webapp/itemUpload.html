@@ -1,0 +1,127 @@
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="style.css">
+<title>동네마켓_판매자</title>
+	<script
+		src="https://kit.fontawesome.com/2d323a629b.js"
+		crossorigin="anonymous"
+	></script>
+</head>
+<body>
+	<input type="checkbox" id="menuicon">
+	<header>
+		<nav class="navbar">
+			<div class="navbar_logo">
+				<i class="fas fa-carrot"></i>
+				<a href="index2.html">동네마켓_판매자</a>
+				<button class="item_submit_btn" type="button" onclick="location.href='seller.html'">제품 올리기</button>
+			</div>
+			
+			
+			<label for="menuicon" class="menubtn">
+				<span></span>
+				<span></span>
+				<span></span>
+			</label>
+		</nav>
+	</header>
+
+	<div class="container">
+	 
+		<div class="contents">
+		
+			<div class="item_image" OnClick="location.href='itemUpload2.html'">
+				<img class="item_upload" src="img/카메라.png" width="400" height="350">
+			</div>
+			
+			<div class="item_contents">
+				<div style="width:585px; height: 40px; margin-top: 100px;">
+					<input type="text" name="width" id="width" autocomplete="off" placeholder="너비" required
+					style="width:435px; height: 40px; border: 1px solid gray; text-align:right; font-size:1.2em; padding: 0 10px 0 0; margin: 0 5px 0 50px;">
+					<label for="width" style="font-size: 1.2em; font-weight:bold;">cm</label>
+				</div>
+			
+				<div style="width:585px; height: 40px; margin-top: 50px;">
+					<input type="text" name="width" id="width" autocomplete="off" placeholder="높이" required
+					style="width:435px; height: 40px; border: 1px solid gray; text-align:right; font-size:1.2em; padding: 0 10px 0 0; margin: 0 5px 0 50px;">
+					<label for="width" style="font-size: 1.2em; font-weight:bold;">cm</label>
+				</div>
+				
+				<div class="grade" OnClick="location.href='itemUpload2.html'" style="width:170px; height:40px; margin: 120px auto;">
+					<button id="btn" type="submit" style="width: 170px; height:40px; font-size:1.0em; font-weight: bold;">등급 확인</button>
+				</div>
+				
+			</div>
+			
+		</div>
+		
+		<div class="list">
+			<div style="width:450px; height: 40px; border: 1px solid gray; float: left; margin: 50px 50px 20px 100px;">
+				<p style="float: right; font-size: 1.2em; font-weight:bold; margin: 5px 20px 5px 0; color:#8d8d8d;">상품명</p>
+			</div>
+			<div style="width:450px; height: 40px; border: 1px solid gray; float: left; margin: 50px 0px 20px 50px;">
+				<p style="float: right; font-size: 1.2em; font-weight:bold; margin: 5px 20px 5px 0; color:#8d8d8d;">가격</p>
+			</div>
+			
+			<div style="width:450px; height: 40px; border: 1px solid gray; float: left; margin: 20px 50px 20px 100px;">
+				<p style="float: right; font-size: 1.2em; font-weight:bold; margin: 5px 20px 5px 0; color:#8d8d8d;">원산지</p>
+			</div>
+			<div style="width:450px; height: 40px; border: 1px solid gray; float: left; margin: 20px 0px 20px 50px;">
+				<p style="float: right; font-size: 1.2em; font-weight:bold; margin: 5px 20px 5px 0; color:#8d8d8d;">수량</p>
+			</div>
+			
+			<div style="width:450px; height: 40px; border: 1px solid gray; float: left; margin: 20px 50px 20px 100px;">
+				<form>
+					<select name="stats" disabled style="width:450px; height: 40px; text-align:right; font-size:1.2em; font-weight:bold;">
+						<option value="new">당도 (선택)</option>
+					</select>
+				</form>
+			</div>
+			<div style="width:450px; height: 40px; border: 1px solid gray; float: left; margin: 20px 0px 20px 50px;">
+				<form>
+					<select name="stats" disabled style="width:450px; height: 40px; text-align:right; font-size:1.2em; font-weight:bold;">
+						<option value="sales period">판매기간</option>
+					</select>
+				</form>
+			</div>
+			
+			<div style="width:450px; height: 40px; border: 1px solid gray; float: left; margin: 20px 50px 20px 100px;">
+				<form>
+					<select name="stats" disabled style="width:450px; height: 40px; text-align:right; font-size:1.2em; font-weight:bold;">
+						<option value="eco">친환경 인증 (선택)</option>
+					</select>
+				</form>
+			</div>
+			<div style="width:450px; height: 40px; border: 1px solid gray; float: left; margin: 20px 0px 20px 50px;">
+				<form>
+					<select name="stats" disabled style="width:450px; height: 40px; text-align:right; font-size:1.2em; font-weight:bold;">
+						<option value="delivery">배달여부 (선택)</option>
+					</select>
+				</form>
+			</div>
+			
+			<div style="width: 1000px; height: 300px; border: 1px solid gray; float: left; margin: 20px 0 0 100px;">
+				<p style="font-size: 1.4em; font-weight:bold; color:#8d8d8d; float: right; margin: 20px 40px 0 0;">제품 설명</p>
+				<div class="ok" OnClick="location.href='#'" style="width: 100px; height: 40px; border: 1px solid gray; float: right; margin: 220px -100px 0 0;">
+					<p style="font-size: 1.4em; font-weight: bold; color:#8d8d8d; margin: 5px 0;">확인</p>
+				</div>
+			</div>
+			
+		</div>
+		
+		<div class="sidebar">
+			<ul class="sidebar_menu">
+				<li><a href="seller.html">마이마켓</a></li>
+				<li><a href="chat.html">채팅목록</a></li>
+				<li><a href="#">매출장부</a></li>
+				<li><a href="index.html">로그아웃</a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<!-- 페이지 상단으로 가는 버튼 -->
+	<a id="pagetop" href="#top"><img src="pagetop.png"></a>
+	
+</body>
+</html>
