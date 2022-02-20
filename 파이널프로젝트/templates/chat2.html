@@ -1,0 +1,106 @@
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="{{url_for('static', path='/style.css')}}">
+<title>동네마켓_판매자</title>
+	<script
+		src="https://kit.fontawesome.com/2d323a629b.js"
+		crossorigin="anonymous"
+	></script>
+</head>
+<body>
+	<input type="checkbox" id="menuicon">
+	<header>
+		<nav class="navbar">
+			<div class="navbar_logo">
+				<i class="fas fa-carrot"></i>
+				<a href="index2">동네마켓_판매자</a>
+				<button class="item_submit_btn" type="button" onclick="location.href='chat'">채팅목록</button>
+			</div>
+
+			<label for="menuicon" class="menubtn">
+				<span></span>
+				<span></span>
+				<span></span>
+			</label>
+		</nav>
+	</header>
+	<div class="chat_title">
+		<div class="back" OnClick="location.href='chat'" style="width:70px; height:50px; float:left; margin-left:5px; margin-right: 20px;">
+			<img src="{{url_for('static', path='/webimage/L_arrow.png')}}" width="70" height="50">
+		</div>
+	
+		<div style="width:1100px; height: 50px; border: 1px solid gray; float:left; text-align:center;">
+			<h1>지우현우맘</h1>
+		</div>
+	</div>
+	
+	<div class="container">
+		<div class="list2">
+			<div class="chat_header" style="width:800px; height: 200px; border: 1px solid gray; margin: 20 auto;">
+				<img src="{{url_for('static', path='/webimage/shine.png')}}" width="200" height="180"> <h1>샤인머스켓 (~10/11)</h1>
+				<form>
+					<select name="stats">
+						<option value="reservation">예약</option>
+						<option value="purchase">구매</option>
+					</select>
+				</form>
+			</div>
+			
+			<div class="chat_main" style="width:800px; height:440px;  margin: 0 auto;">
+				<div style="width:50px; height:50px; border: 1px solid gray; border-radius:30px; float: left; margin: 20px ;"></div>
+				<div style="width: 300px; height: 70px; border: 1px solid gray; border-radius:10px; float: left; margin: 20px;">
+				<p>샤인머스켓 지금 가면 있을까요?</p>
+				</div>
+				
+				<div style="width: 300px; height: 70px; border: 1px solid gray; border-radius:10px; float: right; margin: 40px 40px 40px 400px;">
+				<p>네~ 아직 있습니다~!!</p>
+				</div>
+				
+				<div style="width:50px; height:50px; border: 1px solid gray; border-radius:30px; float: left; margin: 20px ;"></div>
+				<div style="width: 300px; height: 70px; border: 1px solid gray; border-radius:10px; float: left; margin: 20px;">
+				<p>그럼 샤인머스켓 하나 예약할게요!</p>
+				</div>
+			</div>
+			
+			<div OnClick="location.href='#'" style="width:800px; height: 200px; border: 1px solid gray; margin: 20 auto; background-color:white;">
+				<div class="ok" style="width: 80px; height: 30px; border: 1px solid gray; margin: 140px 20px 20px 20px; text-align:center; padding: 5px; font-weight: bold; font-size:20px; float:right; background-color:white;">
+				확인
+				</div>
+			</div>
+		</div>
+		
+		<div class="sidebar">
+			<ul class="sidebar_menu">
+				<li><a href="seller">마이마켓</a></li>
+				<li><a href="chat">채팅목록</a></li>
+				<li><a href="#">매출장부</a></li>
+				<li><a href="index">로그아웃</a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<!-- 페이지 상단으로 가는 버튼 -->
+	<a id="pagetop" href="#top"><img src="{{url_for('static', path='/pagetop.png')}}"></a>
+	
+	<footer>
+		<div class="corp_area">
+			<ul class="list_corp">
+				<li class="corp_item"><a href="#">동네<br>마켓</a></li>
+				<li class="corp_item"><a href="#">회사소개</a></li> 
+				<li class="corp_item"><a href="#">인재채용</a></li>
+				<li class="corp_item"><a href="#">제휴제안</a></li>
+				<li class="corp_item"><a href="#">이용약관</a></li>
+				<li class="corp_item"><a href="#">개인정보처리방침</a></li>
+			</ul>
+		</div>
+		
+		<div class="notice_area">
+		<p>대표 : 김대표<br>주소 : 서울특별시 종로구 청와대대로1<br>사업자등록번호 : 123-45-678910</p>
+		<small>Copyright &copy; 동네마켓(주). 
+		All rights Reserved.</small>
+		</div>
+	</footer>
+	
+</body>
+</html>

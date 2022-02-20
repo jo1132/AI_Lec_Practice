@@ -1,0 +1,152 @@
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="{{url_for('static', path='/style.css')}}">
+<title>동네마켓_판매자</title>
+	<script
+		src="https://kit.fontawesome.com/2d323a629b.js"
+		crossorigin="anonymous"
+	></script>
+</head>
+<body>
+	<input type="checkbox" id="menuicon">
+	<header>
+		<nav class="navbar">
+			<div class="navbar_logo">
+				<i class="fas fa-carrot"></i>
+				<a href="index2">동네마켓_판매자</a>
+				<button class="item_submit_btn" type="button" onclick="location.href='seller'">제품 올리기</button>
+			</div>
+			
+			
+			<label for="menuicon" class="menubtn">
+				<span></span>
+				<span></span>
+				<span></span>
+			</label>
+		</nav>
+	</header>
+
+	<div class="container">
+	 
+		<div class="contents">
+		
+			<div class="item_image2" >
+				<img class="item_upload" src="{{image}}" width="400" height="350">
+				<div class="ok" OnClick="location.href='itemUpload'" style="width: 250px; height: 40px; border: 1px solid gray; margin: -35px auto;">
+					<p style="font-size: 1.4em; font-weight: bold; margin-top:5px;">등급 재입력</p>
+				</div>
+			</div>
+			
+			<div class="item_contents">
+				<div style="width:100px; height:40px; float: left; margin: 50px 10px 50px 50px;">
+					<p style="font-size: 1.4em; font-weight: bold; margin-top: 5px; text-align: center;">너비</p>
+				</div>
+				<div style="width:305px; height:40px; border: 1px solid gray; float: left; margin: 50px 10px 50px 0;">
+					<p style="float: right; font-size: 1.2em; margin: 5px 20px 5px 0;">{{width}} cm</p>
+				</div>
+				
+				<div style="width:100px; height:40px; float: left; margin: 0px 10px 50px 50px;">
+					<p style="font-size: 1.4em; font-weight: bold; margin-top: 5px; text-align: center;">높이</p>
+				</div>
+				<div style="width:305px; height:40px; border: 1px solid gray; float: left; margin: 0px 10px 50px 0;">
+					<p style="float: right; font-size: 1.2em; margin: 5px 20px 5px 0;">{{height}} cm</p>
+				</div>
+				
+				<div style="width:100px; height:40px; float: left; margin: 0px 10px 50px 50px;">
+					<p style="font-size: 1.4em; font-weight: bold; margin-top: 5px; text-align: center;">무게</p>
+				</div>
+				<div style="width:305px; height:40px; border: 1px solid gray; float: left; margin: 0px 10px 50px 0;">
+					<p style="float: right; font-size: 1.2em; margin: 5px 20px 5px 0;">{{weight}} g</p>
+				</div>
+				
+				<div style="width:100px; height:40px; float: left; margin: 0px 10px 50px 50px;">
+					<p style="font-size: 1.4em; font-weight: bold; margin-top: 5px; text-align: center;">등급</p>
+				</div>
+				<div style="width:305px; height:40px; border: 1px solid gray; float: left; margin: 0px 10px 50px 0;">
+					<p style="float: right; font-size: 1.2em; margin: 5px 20px 5px 0;">{{grade}}</p>
+				</div>
+				
+			</div>
+			
+		</div>
+		
+		<div class="list">
+			<div style="width:450px; height: 40px; border: 1px solid gray; float: left; margin: 50px 50px 20px 100px;">
+				<p style="float: right; font-size: 1.2em; font-weight:bold; margin: 5px 20px 5px 0;">{{fruit}} {{name}}</p>
+			</div>
+			<div style="width:450px; height: 40px; border: 1px solid gray; float: left; margin: 50px 0px 20px 50px;">
+				<p style="float: right; font-size: 1.2em; font-weight:bold; margin: 5px 20px 5px 0;">가격</p>
+			</div>
+			
+			<div style="width:450px; height: 40px; border: 1px solid gray; float: left; margin: 20px 50px 20px 100px;">
+				<p style="float: right; font-size: 1.2em; font-weight:bold; margin: 5px 20px 5px 0;">원산지</p>
+			</div>
+			<div style="width:450px; height: 40px; border: 1px solid gray; float: left; margin: 20px 0px 20px 50px;">
+				<p style="float: right; font-size: 1.2em; font-weight:bold; margin: 5px 20px 5px 0;">수량</p>
+			</div>
+			
+			<div style="width:450px; height: 40px; float: left; margin: 20px 50px 20px 100px;">
+				<form>
+					<select name="stats" style="width:450px; height: 40px; text-align:right; font-size:1.2em; font-weight:bold;">
+						<option value="new">당도 (선택)</option>
+						<option value="high">상</option>
+						<option value="middle">중</option>
+						<option value="low">하</option>
+					</select>
+				</form>
+			</div>
+			<div style="width:450px; height: 40px; float: left; margin: 20px 0px 20px 50px;">
+				<form>
+					<select name="stats" style="width:450px; height: 40px; text-align:right; font-size:1.2em; font-weight:bold;">
+						<option value="sales period">판매기간</option>
+						<option value="1day">1일</option>
+						<option value="3days">3일</option>
+						<option value="5days">5일</option>
+						<option value="7days">7일</option>
+					</select>
+				</form>
+			</div>
+			
+			<div style="width:450px; height: 40px; float: left; margin: 20px 50px 20px 100px;">
+				<form>
+					<select name="stats" style="width:450px; height: 40px; text-align:right; font-size:1.2em; font-weight:bold;">
+						<option value="eco">친환경 인증 (선택)</option>
+						<option value="yes">유</option>
+						<option value="no">무</option>
+					</select>
+				</form>
+			</div>
+			<div style="width:450px; height: 40px; float: left; margin: 20px 0px 20px 50px;">
+				<form>
+					<select name="stats" style="width:450px; height: 40px; text-align:right; font-size:1.2em; font-weight:bold;">
+						<option value="delivery">배달여부 (선택)</option>
+						<option value="yes">배달</option>
+						<option value="no">직접구매</option>
+					</select>
+				</form>
+			</div>
+			
+			<div style="width: 1000px; height: 300px; border: 1px solid gray; float: left; margin: 20px 0 0 100px;">
+				<p style="font-size: 1.4em; font-weight:bold; color:#8d8d8d; float: right; margin: 20px 40px 0 0;">제품 설명</p>
+				<div class="ok" OnClick="location.href='#'" style="width: 100px; height: 40px; border: 1px solid gray; float: right; margin: 220px -100px 0 0;">
+					<p style="font-size: 1.4em; font-weight: bold; margin: 5px 0;">확인</p>
+				</div>
+			</div>	
+		</div>
+		
+		<div class="sidebar">
+			<ul class="sidebar_menu">
+				<li><a href="seller">마이마켓</a></li>
+				<li><a href="chat">채팅목록</a></li>
+				<li><a href="#">매출장부</a></li>
+				<li><a href="index">로그아웃</a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<!-- 페이지 상단으로 가는 버튼 -->
+	<a id="pagetop" href="#top"><img src="{{url_for('static', path='/pagetop.png')}}"></a>
+	
+</body>
+</html>

@@ -1,0 +1,19 @@
+<body>
+	<h1>이미지 입력 테스트</h1>
+	<form action='imageinsert', method='post' enctype="multipart/form-data">
+		<label for="width">너비 입력:</label><br>
+		<input type='text' name='width' value='0'></br>
+		<label for="height">높이 입력:</label><br>
+		<input type='text' name='height' value='0'></br>
+		<label for='image'>이미지 입력:</label><br>
+		<input type='file' name='image' accept='image/*'><br>
+		<input type='submit' name='등록'></br>
+
+	<img src={{image}} alt="TestImage" width=256px height=256px>
+	<h3>Fruit : {{fruit}}</h3>
+	<h3>Name  : {{name}}</h3>
+	<h3>Width : {{width}}</h3>
+        <h3>Height: {{height}}</h3>
+	<h3>Weight: {{weight}}g</h3>
+	<h3>Grade : {{grade}}</h3>
+</body>
